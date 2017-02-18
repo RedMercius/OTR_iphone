@@ -12,6 +12,7 @@
 		9F9C0ADF1E5732AA00105E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0ADD1E5732AA00105E23 /* Main.storyboard */; };
 		9F9C0AE11E5732AA00105E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0AE01E5732AA00105E23 /* Assets.xcassets */; };
 		9F9C0AE41E5732AA00105E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0AE21E5732AA00105E23 /* LaunchScreen.storyboard */; };
+		9F9C0AEE1E57C38400105E23 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9C0AED1E57C38400105E23 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		9F9C0AE01E5732AA00105E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F9C0AE31E5732AA00105E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F9C0AE51E5732AA00105E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F9C0AEB1E57C38300105E23 /* Johnnie's Old Time Radio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Johnnie's Old Time Radio.entitlements"; sourceTree = "<group>"; };
+		9F9C0AED1E57C38400105E23 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F9C0AEE1E57C38400105E23 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				9F9C0AD81E5732AA00105E23 /* Johnnie's Old Time Radio */,
 				9F9C0AD71E5732AA00105E23 /* Products */,
+				9F9C0AEC1E57C38400105E23 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +59,7 @@
 		9F9C0AD81E5732AA00105E23 /* Johnnie's Old Time Radio */ = {
 			isa = PBXGroup;
 			children = (
+				9F9C0AEB1E57C38300105E23 /* Johnnie's Old Time Radio.entitlements */,
 				9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */,
 				9F9C0ADB1E5732AA00105E23 /* ViewController.swift */,
 				9F9C0ADD1E5732AA00105E23 /* Main.storyboard */,
@@ -62,6 +68,14 @@
 				9F9C0AE51E5732AA00105E23 /* Info.plist */,
 			);
 			path = "Johnnie's Old Time Radio";
+			sourceTree = "<group>";
+		};
+		9F9C0AEC1E57C38400105E23 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F9C0AED1E57C38400105E23 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,7 +110,13 @@
 				TargetAttributes = {
 					9F9C0AD51E5732A900105E23 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9XHH33UE58;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -260,6 +280,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Johnnie's Old Time Radio/Johnnie's Old Time Radio.entitlements";
+				DEVELOPMENT_TEAM = 9XHH33UE58;
 				INFOPLIST_FILE = "Johnnie's Old Time Radio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Johnnie-Ruffin.Johnnie-s-Old-Time-Radio";
@@ -272,6 +294,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Johnnie's Old Time Radio/Johnnie's Old Time Radio.entitlements";
+				DEVELOPMENT_TEAM = 9XHH33UE58;
 				INFOPLIST_FILE = "Johnnie's Old Time Radio/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Johnnie-Ruffin.Johnnie-s-Old-Time-Radio";
@@ -299,6 +323,7 @@
 				9F9C0AEA1E5732AA00105E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
