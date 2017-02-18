@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5s-9c-v0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1581" y="-559"/>
+            <point key="canvasLocation" x="300" y="203"/>
         </scene>
         <!--Thriller View Controller-->
         <scene sceneID="q0d-4G-r0e">
@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqZ-ag-fdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2365" y="-561"/>
+            <point key="canvasLocation" x="1122" y="203"/>
         </scene>
         <!--Western View Controller-->
         <scene sceneID="NMN-5z-Ov1">
@@ -80,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XR5-ZW-yVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3083" y="-568"/>
+            <point key="canvasLocation" x="1950" y="203"/>
         </scene>
         <!--Sci Fi View Controller-->
         <scene sceneID="BKN-R3-tvK">
@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DrZ-Ey-kPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3871" y="-559"/>
+            <point key="canvasLocation" x="2807" y="203"/>
         </scene>
         <!--Selection Table View-->
         <scene sceneID="ejr-bn-Oi3">
@@ -113,7 +113,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEJ-Zf-B9W" id="bUM-FH-l69">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -126,7 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjH-eL-FFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3481" y="116"/>
+            <point key="canvasLocation" x="1847" y="-562"/>
         </scene>
         <!--Play View-->
         <scene sceneID="dWj-1s-3gW">
@@ -144,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-89-DbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4565" y="-557"/>
+            <point key="canvasLocation" x="2842" y="-561"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0ol-bC-diF">
