@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "bob_hope_1950_0_fixed_0.png",
+      "filename" : "bob_hope_118x1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "bob_hope_118x2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "bob_hope_118x3.png",
       "scale" : "3x"
     }
   ],

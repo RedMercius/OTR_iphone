@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,33 +22,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMh-kV-VWC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMh-kV-VWC">
                                 <rect key="frame" x="156" y="229" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="nJ1-Iw-tUU"/>
+                                </constraints>
                                 <state key="normal" title="Comedy"/>
                                 <connections>
                                     <segue destination="Alm-6z-n8h" kind="show" id="SSY-Wc-dek"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki5-gl-5BZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki5-gl-5BZ">
                                 <rect key="frame" x="127" y="285" width="120" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="qV9-8J-dRP"/>
+                                </constraints>
                                 <state key="normal" title="Science Fiction"/>
                                 <connections>
                                     <segue destination="M1L-vn-KPd" kind="show" id="S1l-HL-jnM"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQE-Oy-Lng">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQE-Oy-Lng">
                                 <rect key="frame" x="156" y="344" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Thriller"/>
                                 <connections>
                                     <segue destination="rdu-xB-cE5" kind="show" id="zFb-Go-MQH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEW-tp-JYA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEW-tp-JYA">
                                 <rect key="frame" x="156" y="408" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Western"/>
                                 <connections>
                                     <segue destination="gBo-oA-3Hk" kind="show" id="mnK-Mw-yKM"/>
@@ -55,6 +58,18 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zMh-kV-VWC" firstAttribute="centerX" secondItem="Ki5-gl-5BZ" secondAttribute="centerX" id="6Lu-le-1yf"/>
+                            <constraint firstItem="zMh-kV-VWC" firstAttribute="leading" secondItem="FQE-Oy-Lng" secondAttribute="leading" id="8P2-uk-2Aa"/>
+                            <constraint firstItem="Ki5-gl-5BZ" firstAttribute="top" secondItem="zMh-kV-VWC" secondAttribute="bottom" constant="26" id="EH0-cZ-O1P"/>
+                            <constraint firstItem="YEW-tp-JYA" firstAttribute="top" secondItem="FQE-Oy-Lng" secondAttribute="bottom" constant="34" id="PE9-uT-nzx"/>
+                            <constraint firstItem="FQE-Oy-Lng" firstAttribute="trailing" secondItem="YEW-tp-JYA" secondAttribute="trailing" id="PTf-aO-SFR"/>
+                            <constraint firstItem="FQE-Oy-Lng" firstAttribute="top" secondItem="Ki5-gl-5BZ" secondAttribute="bottom" constant="29" id="ZeX-ho-Wt1"/>
+                            <constraint firstItem="zMh-kV-VWC" firstAttribute="trailing" secondItem="FQE-Oy-Lng" secondAttribute="trailing" id="c2x-TQ-i8f"/>
+                            <constraint firstItem="zMh-kV-VWC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dSj-ib-vJg"/>
+                            <constraint firstItem="FQE-Oy-Lng" firstAttribute="leading" secondItem="YEW-tp-JYA" secondAttribute="leading" id="fDB-Hg-y4E"/>
+                            <constraint firstItem="zMh-kV-VWC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="165" id="qc5-cQ-rdJ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0LS-bH-pXE"/>
                 </viewController>
@@ -74,38 +89,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-Wp-FrX" userLabel="btnBurnsAllen">
-                                <rect key="frame" x="48" y="156" width="118" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-Wp-FrX" userLabel="btnBurnsAllen">
+                                <rect key="frame" x="49" y="119" width="118" height="117"/>
                                 <state key="normal" image="Burns&amp;Allen"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-xA-kx3" userLabel="btnGildersleeves">
-                                <rect key="frame" x="207" y="156" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-xA-kx3" userLabel="btnGildersleeves">
+                                <rect key="frame" x="208" y="118" width="118" height="118"/>
                                 <state key="normal" image="Gildersleeves"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhJ-gB-ENH" userLabel="btnFibber">
-                                <rect key="frame" x="48" y="305" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhJ-gB-ENH" userLabel="btnFibber">
+                                <rect key="frame" x="49" y="274" width="118" height="118"/>
                                 <state key="normal" image="Fibber McGee"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-yB-V6w" userLabel="btnJackBenny">
-                                <rect key="frame" x="207" y="305" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-yB-V6w" userLabel="btnJackBenny">
+                                <rect key="frame" x="208" y="274" width="118" height="118"/>
                                 <state key="normal" image="Jack Benny"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o3-Yg-jxX" userLabel="btnBobHope">
-                                <rect key="frame" x="48" y="468" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o3-Yg-jxX" userLabel="btnBobHope">
+                                <rect key="frame" x="49" y="430" width="118" height="118"/>
                                 <state key="normal" image="Bob Hope"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-tj-uut" userLabel="btnMartinLewis">
-                                <rect key="frame" x="207" y="468" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-tj-uut" userLabel="btnMartinLewis">
+                                <rect key="frame" x="208" y="430" width="118" height="118"/>
                                 <state key="normal" image="Martin&amp;Lewis"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UhJ-gB-ENH" firstAttribute="top" secondItem="Vtw-Wp-FrX" secondAttribute="bottom" constant="38" id="2hi-G2-WGD"/>
+                            <constraint firstItem="Oih-yB-V6w" firstAttribute="top" secondItem="UhJ-gB-ENH" secondAttribute="top" id="KCJ-oW-9Yq"/>
+                            <constraint firstItem="2o3-Yg-jxX" firstAttribute="top" secondItem="3cR-tj-uut" secondAttribute="top" id="KEa-pk-B8a"/>
+                            <constraint firstItem="RBX-xA-kx3" firstAttribute="top" secondItem="90s-8V-OP8" secondAttribute="bottom" constant="54" id="KVk-mG-xF2"/>
+                            <constraint firstItem="Oih-yB-V6w" firstAttribute="leading" secondItem="RBX-xA-kx3" secondAttribute="leading" id="Q5p-8l-Wle"/>
+                            <constraint firstItem="RBX-xA-kx3" firstAttribute="leading" secondItem="Vtw-Wp-FrX" secondAttribute="trailing" constant="41" id="VeR-S8-G0a"/>
+                            <constraint firstItem="Vtw-Wp-FrX" firstAttribute="bottom" secondItem="RBX-xA-kx3" secondAttribute="bottom" id="aMb-BL-qSv"/>
+                            <constraint firstItem="Vtw-Wp-FrX" firstAttribute="leading" secondItem="UhJ-gB-ENH" secondAttribute="leading" id="gob-n2-29T"/>
+                            <constraint firstItem="UhJ-gB-ENH" firstAttribute="leading" secondItem="2o3-Yg-jxX" secondAttribute="leading" id="hJ4-yn-7lv"/>
+                            <constraint firstItem="UhJ-gB-ENH" firstAttribute="centerY" secondItem="q4F-vc-RpC" secondAttribute="centerY" id="mYZ-QR-P8G"/>
+                            <constraint firstItem="2o3-Yg-jxX" firstAttribute="top" secondItem="UhJ-gB-ENH" secondAttribute="bottom" constant="38" id="oiI-V3-c3e"/>
+                            <constraint firstItem="Vtw-Wp-FrX" firstAttribute="centerY" secondItem="RBX-xA-kx3" secondAttribute="centerY" id="sYw-ov-q68"/>
+                            <constraint firstItem="Vtw-Wp-FrX" firstAttribute="leading" secondItem="q4F-vc-RpC" secondAttribute="leadingMargin" constant="33" id="xew-RT-ihc"/>
+                            <constraint firstItem="Oih-yB-V6w" firstAttribute="leading" secondItem="3cR-tj-uut" secondAttribute="leading" id="zT3-P2-2j0"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5s-9c-v0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,23 +149,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeG-uk-Tfp" userLabel="btnSpeed">
-                                <rect key="frame" x="49" y="160" width="118" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeG-uk-Tfp" userLabel="btnSpeed">
+                                <rect key="frame" x="40" y="180" width="118" height="117"/>
                                 <state key="normal" image="Speed"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OG-Rs-vyZ" userLabel="btnInnerSanctum">
-                                <rect key="frame" x="49" y="365" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bO-MU-Rsg" userLabel="btnWhistler">
+                                <rect key="frame" x="217" y="180" width="118" height="118"/>
+                                <state key="normal" image="Whistler"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OG-Rs-vyZ" userLabel="btnInnerSanctum">
+                                <rect key="frame" x="40" y="369" width="118" height="118"/>
                                 <state key="normal" image="Inner Sanctum"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bO-MU-Rsg" userLabel="btnWhistler">
-                                <rect key="frame" x="226" y="160" width="118" height="118"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyf-yA-tAQ" userLabel="btnInnerSanctum">
+                                <rect key="frame" x="217" y="369" width="118" height="118"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="Whistler"/>
+                                <state key="normal" image="NightBeat"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5OG-Rs-vyZ" firstAttribute="top" secondItem="6bO-MU-Rsg" secondAttribute="bottom" constant="71" id="4fJ-BL-kWo"/>
+                            <constraint firstItem="BeG-uk-Tfp" firstAttribute="leading" secondItem="xs6-uv-H1A" secondAttribute="leadingMargin" constant="24" id="6zc-l0-Qjp"/>
+                            <constraint firstItem="6bO-MU-Rsg" firstAttribute="leading" secondItem="BeG-uk-Tfp" secondAttribute="trailing" constant="59" id="8h6-3g-J3e"/>
+                            <constraint firstItem="l7A-KO-jG8" firstAttribute="top" secondItem="5OG-Rs-vyZ" secondAttribute="bottom" constant="180" id="9hZ-7G-UI5"/>
+                            <constraint firstItem="BeG-uk-Tfp" firstAttribute="top" secondItem="6bO-MU-Rsg" secondAttribute="top" id="FaN-go-Vzv"/>
+                            <constraint firstItem="BeG-uk-Tfp" firstAttribute="top" secondItem="3gR-Lt-IIX" secondAttribute="bottom" constant="116" id="IjJ-6K-ncg"/>
+                            <constraint firstItem="5OG-Rs-vyZ" firstAttribute="leading" secondItem="xs6-uv-H1A" secondAttribute="leading" constant="40" id="Qge-cj-fK0"/>
+                            <constraint firstItem="BeG-uk-Tfp" firstAttribute="centerY" secondItem="6bO-MU-Rsg" secondAttribute="centerY" id="jBx-ZQ-0M4"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqZ-ag-fdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,18 +196,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WF-uv-Hn1" userLabel="btnFortLaramie">
-                                <rect key="frame" x="47" y="275" width="118" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WF-uv-Hn1" userLabel="btnFortLaramie">
+                                <rect key="frame" x="46" y="274" width="118" height="117"/>
                                 <state key="normal" image="FortLaramie"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-yw-PJC" userLabel="btnHopalong">
-                                <rect key="frame" x="212" y="275" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-yw-PJC" userLabel="btnHopalong">
+                                <rect key="frame" x="211" y="274" width="118" height="118"/>
                                 <state key="normal" image="Hopalong"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1WF-uv-Hn1" firstAttribute="top" secondItem="3eE-6O-Usx" secondAttribute="bottom" constant="210" id="4Fu-04-nY8"/>
+                            <constraint firstItem="1WF-uv-Hn1" firstAttribute="centerY" secondItem="YOA-yw-PJC" secondAttribute="centerY" id="Ys8-vP-sNu"/>
+                            <constraint firstItem="YOA-yw-PJC" firstAttribute="centerY" secondItem="c39-j8-aC8" secondAttribute="centerY" id="dNX-QH-jM8"/>
+                            <constraint firstItem="YOA-yw-PJC" firstAttribute="leading" secondItem="1WF-uv-Hn1" secondAttribute="trailing" constant="47" id="ffB-h5-BPs"/>
+                            <constraint firstItem="1WF-uv-Hn1" firstAttribute="leading" secondItem="c39-j8-aC8" secondAttribute="leadingMargin" constant="30" id="poo-oy-bbo"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XR5-ZW-yVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -189,18 +231,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kte-NR-JXR" userLabel="btnDimensionX">
-                                <rect key="frame" x="45" y="275" width="118" height="117"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kte-NR-JXR" userLabel="btnDimensionX">
+                                <rect key="frame" x="40" y="274" width="118" height="117"/>
                                 <state key="normal" image="DimensionX"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-dO-ex9" userLabel="btnXMinusOne">
-                                <rect key="frame" x="222" y="275" width="118" height="118"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-dO-ex9" userLabel="btnXMinusOne">
+                                <rect key="frame" x="217" y="274" width="118" height="118"/>
                                 <state key="normal" image="XMinusOne"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kte-NR-JXR" firstAttribute="leading" secondItem="y1X-7g-ZHr" secondAttribute="leadingMargin" constant="24" id="L3d-S9-fvk"/>
+                            <constraint firstItem="kte-NR-JXR" firstAttribute="centerY" secondItem="cpU-dO-ex9" secondAttribute="centerY" id="Pho-bX-Dzs"/>
+                            <constraint firstItem="cpU-dO-ex9" firstAttribute="leading" secondItem="kte-NR-JXR" secondAttribute="trailing" constant="59" id="ZRA-vZ-Efe"/>
+                            <constraint firstItem="kte-NR-JXR" firstAttribute="top" secondItem="6zJ-Ti-H4F" secondAttribute="bottom" constant="210" id="gzs-MN-fbf"/>
+                            <constraint firstItem="cpU-dO-ex9" firstAttribute="centerY" secondItem="y1X-7g-ZHr" secondAttribute="centerY" id="ohJ-Qy-RKv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DrZ-Ey-kPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -224,6 +271,37 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Ssz-Yx-xee">
+                                <rect key="frame" x="0.0" y="72" width="375" height="60"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ssz-Yx-xee" id="BBV-jJ-MB7">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLa-zX-yM7">
+                                            <rect key="frame" x="321" y="14" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gX5-KL-Mhr">
+                                            <rect key="frame" x="0.0" y="35" width="110" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-ev-UNz">
+                                            <rect key="frame" x="8" y="0.0" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10N-g2-xtY">
+                                            <rect key="frame" x="117" y="-3" width="196" height="54"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="CBw-jB-JTK" id="MiP-K0-Evf"/>
@@ -233,7 +311,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjH-eL-FFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524" y="1004"/>
+            <point key="canvasLocation" x="1524" y="1003.4482758620691"/>
         </scene>
         <!--Play View-->
         <scene sceneID="dWj-1s-3gW">
@@ -246,12 +324,18 @@
                     <view key="view" contentMode="scaleToFill" id="rrs-8Y-KGf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Burns&amp;Allen" translatesAutoresizingMaskIntoConstraints="NO" id="2AE-n0-VWd">
+                                <rect key="frame" x="67" y="202" width="240" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-89-DbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2394" y="1004"/>
+            <point key="canvasLocation" x="2392.8000000000002" y="1003.4482758620691"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0ol-bC-diF">
@@ -273,18 +357,19 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bob Hope" width="192" height="192"/>
-        <image name="Burns&amp;Allen" width="200" height="200"/>
-        <image name="DimensionX" width="192" height="192"/>
-        <image name="Fibber McGee" width="192" height="192"/>
-        <image name="FortLaramie" width="192" height="192"/>
-        <image name="Gildersleeves" width="192" height="192"/>
-        <image name="Hopalong" width="192" height="192"/>
-        <image name="Inner Sanctum" width="200" height="200"/>
-        <image name="Jack Benny" width="192" height="192"/>
-        <image name="Martin&amp;Lewis" width="192" height="192"/>
-        <image name="Speed" width="192" height="192"/>
-        <image name="Whistler" width="480" height="360"/>
-        <image name="XMinusOne" width="192" height="192"/>
+        <image name="Bob Hope" width="118" height="118"/>
+        <image name="Burns&amp;Allen" width="118" height="118"/>
+        <image name="DimensionX" width="118" height="118"/>
+        <image name="Fibber McGee" width="118" height="118"/>
+        <image name="FortLaramie" width="118" height="118"/>
+        <image name="Gildersleeves" width="118" height="118"/>
+        <image name="Hopalong" width="118" height="118"/>
+        <image name="Inner Sanctum" width="118" height="118"/>
+        <image name="Jack Benny" width="118" height="118"/>
+        <image name="Martin&amp;Lewis" width="118" height="118"/>
+        <image name="NightBeat" width="118" height="118"/>
+        <image name="Speed" width="118" height="118"/>
+        <image name="Whistler" width="118" height="118"/>
+        <image name="XMinusOne" width="118" height="118"/>
     </resources>
 </document>

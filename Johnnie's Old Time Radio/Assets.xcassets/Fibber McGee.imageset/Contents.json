@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "fibber_and_molly_.png",
+      "filename" : "fibber_and_molly_118x1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "fibber_and_molly_118x2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "fibber_and_molly_118x3.png",
       "scale" : "3x"
     }
   ],

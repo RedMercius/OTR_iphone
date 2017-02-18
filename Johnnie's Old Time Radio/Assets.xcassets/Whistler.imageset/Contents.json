@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "thewhistler.jpg",
+      "filename" : "thewhistler_118x1.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "thewhistler_118x2.jpg",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "thewhistler_118x3.jpg",
       "scale" : "3x"
     }
   ],
