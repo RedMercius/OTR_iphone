@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		9F3056C51E58CCB500EE598B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3056C41E58CCB500EE598B /* Assets.xcassets */; };
+		9F3056CA1E59ED7800EE598B /* ComedyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056C91E59ED7800EE598B /* ComedyViewController.swift */; };
+		9F3056CC1E59EDA200EE598B /* ThrillerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056CB1E59EDA200EE598B /* ThrillerViewController.swift */; };
+		9F3056CE1E59EDBC00EE598B /* SciFiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056CD1E59EDBC00EE598B /* SciFiViewController.swift */; };
+		9F3056D01E59EDE300EE598B /* WesternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056CF1E59EDE300EE598B /* WesternViewController.swift */; };
+		9F3056D21E59F02D00EE598B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056D11E59F02D00EE598B /* PlayViewController.swift */; };
+		9F3056D41E59F4DC00EE598B /* RadioTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056D31E59F4DC00EE598B /* RadioTitle.swift */; };
 		9F9C0ADA1E5732AA00105E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */; };
 		9F9C0ADC1E5732AA00105E23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0ADB1E5732AA00105E23 /* ViewController.swift */; };
 		9F9C0ADF1E5732AA00105E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0ADD1E5732AA00105E23 /* Main.storyboard */; };
@@ -17,6 +23,12 @@
 
 /* Begin PBXFileReference section */
 		9F3056C41E58CCB500EE598B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9F3056C91E59ED7800EE598B /* ComedyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComedyViewController.swift; sourceTree = "<group>"; };
+		9F3056CB1E59EDA200EE598B /* ThrillerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrillerViewController.swift; sourceTree = "<group>"; };
+		9F3056CD1E59EDBC00EE598B /* SciFiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SciFiViewController.swift; sourceTree = "<group>"; };
+		9F3056CF1E59EDE300EE598B /* WesternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternViewController.swift; sourceTree = "<group>"; };
+		9F3056D11E59F02D00EE598B /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		9F3056D31E59F4DC00EE598B /* RadioTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTitle.swift; sourceTree = "<group>"; };
 		9F9C0AD61E5732AA00105E23 /* Johnnie's Old Time Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Johnnie's Old Time Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9C0ADB1E5732AA00105E23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,9 +75,15 @@
 				9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */,
 				9F9C0ADB1E5732AA00105E23 /* ViewController.swift */,
 				9F9C0ADD1E5732AA00105E23 /* Main.storyboard */,
+				9F3056D31E59F4DC00EE598B /* RadioTitle.swift */,
+				9F3056D11E59F02D00EE598B /* PlayViewController.swift */,
+				9F3056CF1E59EDE300EE598B /* WesternViewController.swift */,
+				9F3056CD1E59EDBC00EE598B /* SciFiViewController.swift */,
+				9F3056CB1E59EDA200EE598B /* ThrillerViewController.swift */,
 				9F3056C41E58CCB500EE598B /* Assets.xcassets */,
 				9F9C0AE21E5732AA00105E23 /* LaunchScreen.storyboard */,
 				9F9C0AE51E5732AA00105E23 /* Info.plist */,
+				9F3056C91E59ED7800EE598B /* ComedyViewController.swift */,
 			);
 			path = "Johnnie's Old Time Radio";
 			sourceTree = "<group>";
@@ -156,8 +174,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F3056CC1E59EDA200EE598B /* ThrillerViewController.swift in Sources */,
 				9F9C0ADC1E5732AA00105E23 /* ViewController.swift in Sources */,
 				9F9C0ADA1E5732AA00105E23 /* AppDelegate.swift in Sources */,
+				9F3056D01E59EDE300EE598B /* WesternViewController.swift in Sources */,
+				9F3056D41E59F4DC00EE598B /* RadioTitle.swift in Sources */,
+				9F3056CE1E59EDBC00EE598B /* SciFiViewController.swift in Sources */,
+				9F3056D21E59F02D00EE598B /* PlayViewController.swift in Sources */,
+				9F3056CA1E59ED7800EE598B /* ComedyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
