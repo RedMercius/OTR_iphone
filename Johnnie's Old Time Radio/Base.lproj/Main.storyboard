@@ -268,7 +268,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEJ-Zf-B9W" id="bUM-FH-l69">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -291,14 +291,15 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="ic_delete"/>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_stream" translatesAutoresizingMaskIntoConstraints="NO" id="gX5-KL-Mhr" userLabel="imgCloud">
-                                            <rect key="frame" x="0.0" y="37" width="94" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-ev-UNz" userLabel="btnPlay">
                                             <rect key="frame" x="0.0" y="-3" width="86" height="32"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="play50"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGm-5t-ygm">
+                                            <rect key="frame" x="35" y="33" width="16" height="22"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Cloud-16x1"/>
                                         </button>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -345,10 +346,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pause50"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-va-86w">
-                                <rect key="frame" x="67" y="487" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-va-86w">
+                                <rect key="frame" x="47" y="486" width="86" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" image="Low Volume_32x1"/>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tg0-ud-PYp">
                                 <rect key="frame" x="128" y="487" width="181" height="31"/>
@@ -384,6 +385,7 @@
     <resources>
         <image name="Bob Hope" width="118" height="118"/>
         <image name="Burns&amp;Allen" width="118" height="118"/>
+        <image name="Cloud-16x1" width="16" height="16"/>
         <image name="DimensionX" width="118" height="118"/>
         <image name="Fibber McGee" width="118" height="118"/>
         <image name="FortLaramie" width="118" height="118"/>
@@ -391,6 +393,7 @@
         <image name="Hopalong" width="118" height="118"/>
         <image name="Inner Sanctum" width="118" height="118"/>
         <image name="Jack Benny" width="118" height="118"/>
+        <image name="Low Volume_32x1" width="32" height="32"/>
         <image name="Martin&amp;Lewis" width="118" height="118"/>
         <image name="NightBeat" width="118" height="118"/>
         <image name="Speed" width="118" height="118"/>
@@ -398,7 +401,6 @@
         <image name="XMinusOne" width="118" height="118"/>
         <image name="end50" width="32" height="32"/>
         <image name="ic_delete" width="24" height="24"/>
-        <image name="ic_stream" width="15" height="15"/>
         <image name="pause50" width="32" height="32"/>
         <image name="play50" width="32" height="32"/>
         <image name="start50" width="32" height="32"/>
