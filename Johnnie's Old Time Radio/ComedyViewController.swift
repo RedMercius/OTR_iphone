@@ -12,6 +12,11 @@ class ComedyViewController: UIViewController {
     
    
     @IBOutlet weak var btnBurnsAllen: UIButton!
+    @IBOutlet weak var btnGildersleeves: UIButton!
+    @IBOutlet weak var btnFibber: UIButton!
+    @IBOutlet weak var btnBobHope: UIButton!
+    @IBOutlet weak var btnMartinLewis: UIButton!
+    @IBOutlet weak var btnJackBenny: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +32,28 @@ class ComedyViewController: UIViewController {
     @IBAction func burnsAllenButton_Click(_ sender: UIButton) {
         print("BurnsAllenButtonClick!!!!")
     }
+    
+    @IBAction func gildersleevesButton_Click(_ sender: UIButton) {
+        print("Gildersleeves ButtonClick!!!!")
+    }
+    
+    @IBAction func fibberButton_Click(_ sender: UIButton) {
+        print("Fibber ButtonClick!!!!")
+    }
+    
+    @IBAction func bobHopeButton_Click(_ sender: UIButton) {
+        print("Bob Hope ButtonClick!!!!")
+    }
+    
+    @IBAction func martinLewisButton_Click(_ sender: UIButton) {
+        print("Martin Lewis ButtonClick!!!!")
+    }
+    
+    @IBAction func jackBennyButton_Click(_ sender: UIButton) {
+        print("Jack Benny ButtonClick!!!!")
+    }
+    
+    
     /*
     // MARK: - Navigation
 

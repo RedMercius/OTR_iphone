@@ -99,22 +99,37 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-xA-kx3" userLabel="btnGildersleeves">
                                 <rect key="frame" x="208" y="118" width="118" height="118"/>
                                 <state key="normal" image="Gildersleeves"/>
+                                <connections>
+                                    <action selector="gildersleevesButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="QGO-Sx-4HU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhJ-gB-ENH" userLabel="btnFibber">
                                 <rect key="frame" x="49" y="274" width="118" height="118"/>
                                 <state key="normal" image="Fibber McGee"/>
+                                <connections>
+                                    <action selector="fibberButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="h5q-VH-16h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o3-Yg-jxX" userLabel="btnBobHope">
                                 <rect key="frame" x="49" y="430" width="118" height="118"/>
                                 <state key="normal" image="Bob Hope"/>
+                                <connections>
+                                    <action selector="bobHopeButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="s2N-a7-SzZ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-tj-uut" userLabel="btnMartinLewis">
                                 <rect key="frame" x="208" y="430" width="118" height="118"/>
                                 <state key="normal" image="Martin&amp;Lewis"/>
+                                <connections>
+                                    <action selector="martinLewisButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="bOh-E9-2DD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-yB-V6w" userLabel="btnJackBenny">
                                 <rect key="frame" x="208" y="274" width="118" height="118"/>
                                 <state key="normal" image="Jack Benny"/>
+                                <connections>
+                                    <action selector="jackBennyButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="JNU-E1-4HZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -136,7 +151,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnBobHope" destination="2o3-Yg-jxX" id="JtF-tA-sGM"/>
                         <outlet property="btnBurnsAllen" destination="Vtw-Wp-FrX" id="7DX-h4-F1L"/>
+                        <outlet property="btnFibber" destination="UhJ-gB-ENH" id="Qou-vd-PgU"/>
+                        <outlet property="btnGildersleeves" destination="RBX-xA-kx3" id="b7e-jf-rwE"/>
+                        <outlet property="btnJackBenny" destination="Oih-yB-V6w" id="Y3t-Yd-nG5"/>
+                        <outlet property="btnMartinLewis" destination="3cR-tj-uut" id="HLy-uS-ajM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5s-9c-v0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -274,7 +294,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEJ-Zf-B9W" id="bUM-FH-l69">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -282,7 +302,7 @@
                                 <rect key="frame" x="0.0" y="72" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ssz-Yx-xee" id="BBV-jJ-MB7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10N-g2-xtY">
