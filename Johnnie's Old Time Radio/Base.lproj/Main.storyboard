@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Johnnie_s_Old_Time_Radio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -29,7 +29,7 @@
                                 </constraints>
                                 <state key="normal" title="Comedy"/>
                                 <connections>
-                                    <segue destination="Alm-6z-n8h" kind="show" id="SSY-Wc-dek"/>
+                                    <segue destination="Alm-6z-n8h" kind="show" id="syq-ym-shc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ki5-gl-5BZ">
@@ -80,7 +80,7 @@
         <!--Comedy View Controller-->
         <scene sceneID="P3U-hh-Djv">
             <objects>
-                <viewController id="Alm-6z-n8h" customClass="ComedyViewController" sceneMemberID="viewController">
+                <viewController id="Alm-6z-n8h" customClass="ComedyViewController" customModule="Johnnie_s_Old_Time_Radio" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="90s-8V-OP8"/>
                         <viewControllerLayoutGuide type="bottom" id="Zw4-bA-SUU"/>
@@ -92,6 +92,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vtw-Wp-FrX" userLabel="btnBurnsAllen">
                                 <rect key="frame" x="49" y="119" width="118" height="117"/>
                                 <state key="normal" image="Burns&amp;Allen"/>
+                                <connections>
+                                    <action selector="burnsAllenButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="IfS-kO-0i3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-xA-kx3" userLabel="btnGildersleeves">
                                 <rect key="frame" x="208" y="118" width="118" height="118"/>
@@ -101,10 +104,6 @@
                                 <rect key="frame" x="49" y="274" width="118" height="118"/>
                                 <state key="normal" image="Fibber McGee"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-yB-V6w" userLabel="btnJackBenny">
-                                <rect key="frame" x="208" y="274" width="118" height="118"/>
-                                <state key="normal" image="Jack Benny"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o3-Yg-jxX" userLabel="btnBobHope">
                                 <rect key="frame" x="49" y="430" width="118" height="118"/>
                                 <state key="normal" image="Bob Hope"/>
@@ -112,6 +111,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-tj-uut" userLabel="btnMartinLewis">
                                 <rect key="frame" x="208" y="430" width="118" height="118"/>
                                 <state key="normal" image="Martin&amp;Lewis"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-yB-V6w" userLabel="btnJackBenny">
+                                <rect key="frame" x="208" y="274" width="118" height="118"/>
+                                <state key="normal" image="Jack Benny"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -132,6 +135,9 @@
                             <constraint firstItem="Oih-yB-V6w" firstAttribute="leading" secondItem="3cR-tj-uut" secondAttribute="leading" id="zT3-P2-2j0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnBurnsAllen" destination="Vtw-Wp-FrX" id="7DX-h4-F1L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U5s-9c-v0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,7 +146,7 @@
         <!--Thriller View Controller-->
         <scene sceneID="q0d-4G-r0e">
             <objects>
-                <viewController id="rdu-xB-cE5" customClass="ThrillerViewController" sceneMemberID="viewController">
+                <viewController id="rdu-xB-cE5" customClass="ThrillerViewController" customModule="Johnnie_s_Old_Time_Radio" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3gR-Lt-IIX"/>
                         <viewControllerLayoutGuide type="bottom" id="l7A-KO-jG8"/>
@@ -188,7 +194,7 @@
         <!--Western View Controller-->
         <scene sceneID="NMN-5z-Ov1">
             <objects>
-                <viewController id="gBo-oA-3Hk" customClass="WesternViewController" sceneMemberID="viewController">
+                <viewController id="gBo-oA-3Hk" customClass="WesternViewController" customModule="Johnnie_s_Old_Time_Radio" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3eE-6O-Usx"/>
                         <viewControllerLayoutGuide type="bottom" id="yFn-fa-msB"/>
@@ -223,7 +229,7 @@
         <!--Sci Fi View Controller-->
         <scene sceneID="BKN-R3-tvK">
             <objects>
-                <viewController id="M1L-vn-KPd" customClass="SciFiViewController" sceneMemberID="viewController">
+                <viewController id="M1L-vn-KPd" customClass="SciFiViewController" customModule="Johnnie_s_Old_Time_Radio" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6zJ-Ti-H4F"/>
                         <viewControllerLayoutGuide type="bottom" id="U3P-R7-ALW"/>

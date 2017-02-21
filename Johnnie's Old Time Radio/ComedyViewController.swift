@@ -9,7 +9,10 @@
 import UIKit
 
 class ComedyViewController: UIViewController {
-
+    
+   
+    @IBOutlet weak var btnBurnsAllen: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +24,9 @@ class ComedyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func burnsAllenButton_Click(_ sender: UIButton) {
+        print("BurnsAllenButtonClick!!!!")
+    }
     /*
     // MARK: - Navigation
 
