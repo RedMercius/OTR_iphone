@@ -10,6 +10,9 @@ import UIKit
 
 class SciFiViewController: UIViewController {
 
+    @IBOutlet weak var btnDimensionX: UIButton!
+    @IBOutlet weak var btnXMinusOne: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,6 +23,15 @@ class SciFiViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func dimensionXButton_Click(_ sender: UIButton) {
+        print("Dimension X ButtonClick!!!!")
+    }
+    
+    @IBAction func xMinusOneButton_Click(_ sender: UIButton) {
+        print("XMinusOne ButtonClick!!!!")
+    }
+    
     
 
     /*

@@ -10,6 +10,11 @@ import UIKit
 
 class ThrillerViewController: UIViewController {
 
+    @IBOutlet weak var btnSpeed: UIButton!
+    @IBOutlet weak var btnWhistler: UIButton!
+    @IBOutlet weak var btnInnerSanctum: UIButton!
+    @IBOutlet weak var btnNightBeat: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +26,22 @@ class ThrillerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func speedButton_Click(_ sender: UIButton) {
+        print("Speed ButtonClick!!!!")
+    }
 
+    @IBAction func whistlerButton_Click(_ sender: UIButton) {
+        print("Whistler ButtonClick!!!!")
+    }
+    
+    @IBAction func innerSanctumButton_Click(_ sender: UIButton) {
+        print("Inner Sanctum ButtonClick!!!!")
+    }
+    
+    @IBAction func nightBeatButton_Click(_ sender: UIButton) {
+        print("Night Beat ButtonClick!!!!")
+    }
+    
     /*
     // MARK: - Navigation
 

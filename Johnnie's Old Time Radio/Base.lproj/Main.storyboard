@@ -178,18 +178,30 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeG-uk-Tfp" userLabel="btnSpeed">
                                 <rect key="frame" x="40" y="180" width="118" height="118"/>
                                 <state key="normal" image="Speed"/>
+                                <connections>
+                                    <action selector="speedButton_Click:" destination="rdu-xB-cE5" eventType="touchUpInside" id="Q7y-XG-llV"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6bO-MU-Rsg" userLabel="btnWhistler">
                                 <rect key="frame" x="217" y="180" width="118" height="119"/>
                                 <state key="normal" image="Whistler"/>
+                                <connections>
+                                    <action selector="whistlerButton_Click:" destination="rdu-xB-cE5" eventType="touchUpInside" id="DeN-JE-Q2w"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OG-Rs-vyZ" userLabel="btnInnerSanctum">
                                 <rect key="frame" x="40" y="307" width="118" height="180"/>
                                 <state key="normal" image="Inner Sanctum"/>
+                                <connections>
+                                    <action selector="innerSanctumButton_Click:" destination="rdu-xB-cE5" eventType="touchUpInside" id="s1H-iE-1E4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qyf-yA-tAQ" userLabel="btnNightBeat">
                                 <rect key="frame" x="217" y="338" width="118" height="118"/>
                                 <state key="normal" image="NightBeat"/>
+                                <connections>
+                                    <action selector="nightBeatButton_Click:" destination="rdu-xB-cE5" eventType="touchUpInside" id="rgc-TX-GL5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -206,6 +218,12 @@
                             <constraint firstItem="l7A-KO-jG8" firstAttribute="top" secondItem="5OG-Rs-vyZ" secondAttribute="bottom" constant="180" id="krO-WD-QlQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnInnerSanctum" destination="5OG-Rs-vyZ" id="3Lj-os-Xwy"/>
+                        <outlet property="btnNightBeat" destination="qyf-yA-tAQ" id="9Hm-XX-LHr"/>
+                        <outlet property="btnSpeed" destination="BeG-uk-Tfp" id="PvM-26-Qk8"/>
+                        <outlet property="btnWhistler" destination="6bO-MU-Rsg" id="m6C-1q-476"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gqZ-ag-fdO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -226,10 +244,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WF-uv-Hn1" userLabel="btnFortLaramie">
                                 <rect key="frame" x="46" y="274" width="118" height="117"/>
                                 <state key="normal" image="FortLaramie"/>
+                                <connections>
+                                    <action selector="fortLaramieButton_Click:" destination="gBo-oA-3Hk" eventType="touchUpInside" id="nJ7-ix-Frr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YOA-yw-PJC" userLabel="btnHopalong">
                                 <rect key="frame" x="211" y="274" width="118" height="118"/>
                                 <state key="normal" image="Hopalong"/>
+                                <connections>
+                                    <action selector="hopalongButton_Click:" destination="gBo-oA-3Hk" eventType="touchUpInside" id="wun-ox-DsZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -241,6 +265,10 @@
                             <constraint firstItem="1WF-uv-Hn1" firstAttribute="leading" secondItem="c39-j8-aC8" secondAttribute="leadingMargin" constant="30" id="poo-oy-bbo"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnFortLaramie" destination="1WF-uv-Hn1" id="pIm-nH-q7X"/>
+                        <outlet property="btnHopalong" destination="YOA-yw-PJC" id="8zl-zI-uNV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XR5-ZW-yVN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,10 +289,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kte-NR-JXR" userLabel="btnDimensionX">
                                 <rect key="frame" x="40" y="274" width="118" height="117"/>
                                 <state key="normal" image="DimensionX"/>
+                                <connections>
+                                    <action selector="dimensionXButton_Click:" destination="M1L-vn-KPd" eventType="touchUpInside" id="OEc-zj-98c"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpU-dO-ex9" userLabel="btnXMinusOne">
                                 <rect key="frame" x="217" y="274" width="118" height="118"/>
                                 <state key="normal" image="XMinusOne"/>
+                                <connections>
+                                    <action selector="xMinusOneButton_Click:" destination="M1L-vn-KPd" eventType="touchUpInside" id="bfQ-kD-NSU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -276,6 +310,10 @@
                             <constraint firstItem="cpU-dO-ex9" firstAttribute="centerY" secondItem="y1X-7g-ZHr" secondAttribute="centerY" id="ohJ-Qy-RKv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnDimensionX" destination="kte-NR-JXR" id="joe-eu-K26"/>
+                        <outlet property="btnXMinusOne" destination="cpU-dO-ex9" id="fNN-c1-0xZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DrZ-Ey-kPd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

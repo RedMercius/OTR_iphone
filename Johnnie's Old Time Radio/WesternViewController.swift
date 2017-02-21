@@ -10,6 +10,9 @@ import UIKit
 
 class WesternViewController: UIViewController {
 
+    @IBOutlet weak var btnFortLaramie: UIButton!
+    @IBOutlet weak var btnHopalong: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +25,15 @@ class WesternViewController: UIViewController {
     }
     
 
+    @IBAction func fortLaramieButton_Click(_ sender: UIButton) {
+        print("Fort Laramie ButtonClick!!!!")
+    }
+    
+    @IBAction func hopalongButton_Click(_ sender: UIButton) {
+        print("Hopalong Cassidy ButtonClick!!!!")
+    }
+    
+    
     /*
     // MARK: - Navigation
 
