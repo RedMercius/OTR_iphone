@@ -94,6 +94,7 @@
                                 <state key="normal" image="Burns&amp;Allen"/>
                                 <connections>
                                     <action selector="burnsAllenButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="IfS-kO-0i3"/>
+                                    <segue destination="CBw-jB-JTK" kind="show" identifier="burnsAllenSeg" id="tgq-yV-kg6"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RBX-xA-kx3" userLabel="btnGildersleeves">
@@ -101,6 +102,7 @@
                                 <state key="normal" image="Gildersleeves"/>
                                 <connections>
                                     <action selector="gildersleevesButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="QGO-Sx-4HU"/>
+                                    <segue destination="CBw-jB-JTK" kind="show" id="qRe-9S-h8K"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhJ-gB-ENH" userLabel="btnFibber">
@@ -108,6 +110,7 @@
                                 <state key="normal" image="Fibber McGee"/>
                                 <connections>
                                     <action selector="fibberButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="h5q-VH-16h"/>
+                                    <segue destination="CBw-jB-JTK" kind="show" id="4qd-ol-fNh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2o3-Yg-jxX" userLabel="btnBobHope">
@@ -115,6 +118,7 @@
                                 <state key="normal" image="Bob Hope"/>
                                 <connections>
                                     <action selector="bobHopeButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="s2N-a7-SzZ"/>
+                                    <segue destination="CBw-jB-JTK" kind="show" id="D7v-F3-mUJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cR-tj-uut" userLabel="btnMartinLewis">
@@ -122,6 +126,7 @@
                                 <state key="normal" image="Martin&amp;Lewis"/>
                                 <connections>
                                     <action selector="martinLewisButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="bOh-E9-2DD"/>
+                                    <segue destination="CBw-jB-JTK" kind="show" id="5od-3f-2cz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oih-yB-V6w" userLabel="btnJackBenny">
@@ -129,6 +134,7 @@
                                 <state key="normal" image="Jack Benny"/>
                                 <connections>
                                     <action selector="jackBennyButton_Click:" destination="Alm-6z-n8h" eventType="touchUpInside" id="JNU-E1-4HZ"/>
+                                    <segue destination="CBw-jB-JTK" kind="show" id="KDP-tt-gQH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -319,54 +325,53 @@
             </objects>
             <point key="canvasLocation" x="2807" y="203"/>
         </scene>
-        <!--Selection Table View-->
+        <!--Selection Table View Controller-->
         <scene sceneID="ejr-bn-Oi3">
             <objects>
-                <tableViewController id="CBw-jB-JTK" customClass="SelectionTableView" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lNR-zg-ELD">
+                <tableViewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="CBw-jB-JTK" customClass="SelectionTableViewController" customModule="Johnnie_s_Old_Time_Radio" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="88" sectionHeaderHeight="28" sectionFooterHeight="28" id="lNR-zg-ELD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tEJ-Zf-B9W">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SelectionTableViewCell" rowHeight="88" id="tEJ-Zf-B9W" customClass="SelectionTableViewCell" customModule="Johnnie_s_Old_Time_Radio">
+                                <rect key="frame" x="0.0" y="28" width="375" height="88"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tEJ-Zf-B9W" id="bUM-FH-l69">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Ssz-Yx-xee">
-                                <rect key="frame" x="0.0" y="72" width="375" height="60"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ssz-Yx-xee" id="BBV-jJ-MB7">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-ev-UNz" userLabel="btnPlay">
+                                            <rect key="frame" x="17" y="8" width="86" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="play50"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGm-5t-ygm" userLabel="btnCloud">
+                                            <rect key="frame" x="52" y="63" width="16" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" image="Cloud-16x1"/>
+                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10N-g2-xtY">
-                                            <rect key="frame" x="117" y="-3" width="196" height="54"/>
+                                            <rect key="frame" x="100" y="17" width="196" height="54"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLa-zX-yM7" userLabel="btnDel">
-                                            <rect key="frame" x="332" y="17" width="24" height="24"/>
+                                            <rect key="frame" x="334" y="32" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" image="ic_delete"/>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yoK-ev-UNz" userLabel="btnPlay">
-                                            <rect key="frame" x="0.0" y="-3" width="86" height="32"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="play50"/>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mGm-5t-ygm">
-                                            <rect key="frame" x="35" y="33" width="16" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" image="Cloud-16x1"/>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="btnCloud" destination="mGm-5t-ygm" id="kSL-Li-UlR"/>
+                                    <outlet property="btnDel" destination="pLa-zX-yM7" id="kac-FQ-5f5"/>
+                                    <outlet property="btnPlay" destination="yoK-ev-UNz" id="n0l-LL-VuU"/>
+                                    <outlet property="lblTitle" destination="10N-g2-xtY" id="1UM-ch-hU2"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -374,15 +379,18 @@
                             <outlet property="delegate" destination="CBw-jB-JTK" id="2Gz-iz-Hum"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <segue destination="ooF-j2-R66" kind="showDetail" identifier="segPlay" id="8eQ-wi-7i5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjH-eL-FFU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524" y="1003.4482758620691"/>
+            <point key="canvasLocation" x="300" y="1109.5952023988007"/>
         </scene>
-        <!--Play View-->
+        <!--Play View Controller-->
         <scene sceneID="dWj-1s-3gW">
             <objects>
-                <viewController id="ooF-j2-R66" customClass="PlayView" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayViewController" id="ooF-j2-R66" customClass="PlayViewController" customModule="Johnnie_s_Old_Time_Radio" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="34X-EZ-M5c"/>
                         <viewControllerLayoutGuide type="bottom" id="MBW-Ia-UdS"/>
@@ -399,33 +407,56 @@
                                 <rect key="frame" x="74" y="145" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="start50"/>
+                                <connections>
+                                    <action selector="btnBackClicked:" destination="ooF-j2-R66" eventType="touchUpInside" id="bEn-y5-wTr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wap-ux-A6G" userLabel="btnFwd">
                                 <rect key="frame" x="268" y="145" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="end50"/>
+                                <connections>
+                                    <action selector="btnForwardClicked:" destination="ooF-j2-R66" eventType="touchUpInside" id="Gvb-o5-iAA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KM-vr-wve" userLabel="btnPause">
                                 <rect key="frame" x="144" y="145" width="86" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="pause50"/>
+                                <connections>
+                                    <action selector="btnPlayClicked:" destination="ooF-j2-R66" eventType="touchUpInside" id="knK-w1-k2v"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ywe-va-86w" userLabel="btnVolume">
                                 <rect key="frame" x="47" y="486" width="86" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Low Volume_32x1"/>
+                                <connections>
+                                    <action selector="btnVolumeClicked:" destination="ooF-j2-R66" eventType="touchUpInside" id="k4a-iX-0v1"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="tg0-ud-PYp">
                                 <rect key="frame" x="128" y="487" width="181" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="btnSliderClicked:" destination="ooF-j2-R66" eventType="valueChanged" id="k9H-BR-N4Z"/>
+                                </connections>
                             </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="btnBack" destination="B8Z-1n-f8S" id="dU6-h1-L8z"/>
+                        <outlet property="btnForward" destination="Wap-ux-A6G" id="pQL-Rc-GEd"/>
+                        <outlet property="btnPlay" destination="5KM-vr-wve" id="NnU-fw-x90"/>
+                        <outlet property="btnSlider" destination="tg0-ud-PYp" id="aez-pU-tn0"/>
+                        <outlet property="btnVolume" destination="Ywe-va-86w" id="ScM-rf-ea7"/>
+                        <outlet property="imgPlay" destination="2AE-n0-VWd" id="MTB-FP-whN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qeg-89-DbG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2392.8000000000002" y="1003.4482758620691"/>
+            <point key="canvasLocation" x="1342" y="1110"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0ol-bC-diF">
@@ -469,4 +500,7 @@
         <image name="play50" width="32" height="32"/>
         <image name="start50" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tgq-yV-kg6"/>
+    </inferredMetricsTieBreakers>
 </document>

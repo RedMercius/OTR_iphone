@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F106C581E5CEBE000B37436 /* SelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F106C571E5CEBE000B37436 /* SelectionTableViewController.swift */; };
+		9F106C5A1E5D194700B37436 /* SelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F106C591E5D194700B37436 /* SelectionTableViewCell.swift */; };
+		9F106C5C1E5D20D500B37436 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F106C5B1E5D20D500B37436 /* Utility.swift */; };
 		9F3056C51E58CCB500EE598B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F3056C41E58CCB500EE598B /* Assets.xcassets */; };
 		9F3056CA1E59ED7800EE598B /* ComedyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056C91E59ED7800EE598B /* ComedyViewController.swift */; };
 		9F3056CC1E59EDA200EE598B /* ThrillerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056CB1E59EDA200EE598B /* ThrillerViewController.swift */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9F106C571E5CEBE000B37436 /* SelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewController.swift; sourceTree = "<group>"; };
+		9F106C591E5D194700B37436 /* SelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectionTableViewCell.swift; sourceTree = "<group>"; };
+		9F106C5B1E5D20D500B37436 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		9F3056C41E58CCB500EE598B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F3056C91E59ED7800EE598B /* ComedyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComedyViewController.swift; sourceTree = "<group>"; };
 		9F3056CB1E59EDA200EE598B /* ThrillerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThrillerViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,9 @@
 				9F9C0AE21E5732AA00105E23 /* LaunchScreen.storyboard */,
 				9F9C0AE51E5732AA00105E23 /* Info.plist */,
 				9F3056C91E59ED7800EE598B /* ComedyViewController.swift */,
+				9F106C571E5CEBE000B37436 /* SelectionTableViewController.swift */,
+				9F106C591E5D194700B37436 /* SelectionTableViewCell.swift */,
+				9F106C5B1E5D20D500B37436 /* Utility.swift */,
 			);
 			path = "Johnnie's Old Time Radio";
 			sourceTree = "<group>";
@@ -176,11 +185,14 @@
 			files = (
 				9F3056CC1E59EDA200EE598B /* ThrillerViewController.swift in Sources */,
 				9F9C0ADC1E5732AA00105E23 /* ViewController.swift in Sources */,
+				9F106C581E5CEBE000B37436 /* SelectionTableViewController.swift in Sources */,
+				9F106C5C1E5D20D500B37436 /* Utility.swift in Sources */,
 				9F9C0ADA1E5732AA00105E23 /* AppDelegate.swift in Sources */,
 				9F3056D01E59EDE300EE598B /* WesternViewController.swift in Sources */,
 				9F3056D41E59F4DC00EE598B /* RadioTitle.swift in Sources */,
 				9F3056CE1E59EDBC00EE598B /* SciFiViewController.swift in Sources */,
 				9F3056D21E59F02D00EE598B /* PlayViewController.swift in Sources */,
+				9F106C5A1E5D194700B37436 /* SelectionTableViewCell.swift in Sources */,
 				9F3056CA1E59ED7800EE598B /* ComedyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
