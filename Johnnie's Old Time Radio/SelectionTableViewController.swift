@@ -77,7 +77,7 @@ class SelectionTableViewController: UITableViewController {
     
     func delClicked(sender: UIButton)
     {
-        print("delClicked: \(titles[sender.tag])")
+       // print("delClicked: \(titles[sender.tag])")
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

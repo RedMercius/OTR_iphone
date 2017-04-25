@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayViewController: UIViewController {
 
@@ -22,27 +23,62 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var btnSlider: UISlider!
     @IBOutlet weak var btnVolume: UIButton!
     
+    var pc = PlayControl()
+    // var audioPlayer = PlayControl().audioPlayer
+    var playTime: CMTime = CMTime(seconds: 0, preferredTimescale: 0)
+    let TAG = "PlayView: "
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print("PlayView: \(showId)")
-        print("PlayView: \(showTitle)")
+        print(TAG, "\(showId)")
+        print(TAG, "\(showTitle)")
+        pc.playRemoteFile(musicFile: showName)
     }
     
-    @IBAction func btnPlayClicked(_ sender: Any) {
+    @IBAction func btnPlayClicked(_ sender: UIButton) {
+        
+        let playImage: UIImage = UIImage(named: "play50.png")!
+        let pauseImage: UIImage = UIImage(named: "pause50.png")!
+        
+        print(TAG, "PlayTime_0: \(playTime)")
+        
+        if (pc.pg.audioPlayer?.rate == 1.0)
+        {
+            btnPlay.setImage(pauseImage, for: UIControlState.normal)
+            pc.pg.audioPlayer!.pause()
+            playTime = pc.pg.audioPlayer.currentTime()
+            
+            print(TAG, "btnPlayClicked: isPlaying")
+        }
+        else
+        {
+            
+            pc.pg.audioPlayer!.seek(to: playTime)
+            print(TAG, "PlayTime_1: \(playTime)")
+            
+            btnPlay.setImage(playImage, for: UIControlState.normal)
+            
+            print(TAG, "btnPlayClicked: isNotPlaying")
+        }
+        //pc.playRemoteFile(musicFile: showName)
     }
 
     @IBAction func btnBackClicked(_ sender: Any) {
+        // TODO: if playing, go back 15 seconds.
     }
     
     @IBAction func btnForwardClicked(_ sender: Any) {
+        // TODO: if playing, go forward 15 seconds.
     }
     
     @IBAction func btnVolumeClicked(_ sender: Any) {
+        // TODO: move from mute, soft, medium to loud based on volume position.
     }
     
     @IBAction func btnSliderClicked(_ sender: Any) {
+        // TODO: increase or decrease the volume based on slider position.
     }
     
     /*func playRemoteFile() {

@@ -17,6 +17,7 @@
 		9F3056D01E59EDE300EE598B /* WesternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056CF1E59EDE300EE598B /* WesternViewController.swift */; };
 		9F3056D21E59F02D00EE598B /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056D11E59F02D00EE598B /* PlayViewController.swift */; };
 		9F3056D41E59F4DC00EE598B /* RadioTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3056D31E59F4DC00EE598B /* RadioTitle.swift */; };
+		9F4326C91E9997890077C1B4 /* PlayControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4326C81E9997890077C1B4 /* PlayControl.swift */; };
 		9F9C0ADA1E5732AA00105E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */; };
 		9F9C0ADC1E5732AA00105E23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F9C0ADB1E5732AA00105E23 /* ViewController.swift */; };
 		9F9C0ADF1E5732AA00105E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0ADD1E5732AA00105E23 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		9F3056CF1E59EDE300EE598B /* WesternViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WesternViewController.swift; sourceTree = "<group>"; };
 		9F3056D11E59F02D00EE598B /* PlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 		9F3056D31E59F4DC00EE598B /* RadioTitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioTitle.swift; sourceTree = "<group>"; };
+		9F4326C81E9997890077C1B4 /* PlayControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayControl.swift; sourceTree = "<group>"; };
 		9F9C0AD61E5732AA00105E23 /* Johnnie's Old Time Radio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Johnnie's Old Time Radio.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F9C0ADB1E5732AA00105E23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				9F106C571E5CEBE000B37436 /* SelectionTableViewController.swift */,
 				9F106C591E5D194700B37436 /* SelectionTableViewCell.swift */,
 				9F106C5B1E5D20D500B37436 /* Utility.swift */,
+				9F4326C81E9997890077C1B4 /* PlayControl.swift */,
 			);
 			path = "Johnnie's Old Time Radio";
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 				9F3056D21E59F02D00EE598B /* PlayViewController.swift in Sources */,
 				9F106C5A1E5D194700B37436 /* SelectionTableViewCell.swift in Sources */,
 				9F3056CA1E59ED7800EE598B /* ComedyViewController.swift in Sources */,
+				9F4326C91E9997890077C1B4 /* PlayControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +323,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Johnnie's Old Time Radio/Johnnie's Old Time Radio.entitlements";
 				DEVELOPMENT_TEAM = 9XHH33UE58;
 				INFOPLIST_FILE = "Johnnie's Old Time Radio/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Johnnie-Ruffin.Johnnie-s-Old-Time-Radio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -333,6 +338,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Johnnie's Old Time Radio/Johnnie's Old Time Radio.entitlements";
 				DEVELOPMENT_TEAM = 9XHH33UE58;
 				INFOPLIST_FILE = "Johnnie's Old Time Radio/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Johnnie-Ruffin.Johnnie-s-Old-Time-Radio";
 				PRODUCT_NAME = "$(TARGET_NAME)";
