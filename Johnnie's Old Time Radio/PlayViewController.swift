@@ -44,25 +44,20 @@ class PlayViewController: UIViewController {
         
         print(TAG, "PlayTime_0: \(playTime)")
         
-        if (pc.pg.audioPlayer?.rate == 1.0)
+        if (true == pc.isPlaying())
         {
-            btnPlay.setImage(pauseImage, for: UIControlState.normal)
-            pc.pg.audioPlayer!.pause()
-            playTime = pc.pg.audioPlayer.currentTime()
-            
+            btnPlay.setImage(playImage, for: UIControlState.normal)
+            pc.pause()
+            playTime = pc.getCurrentTime()
             print(TAG, "btnPlayClicked: isPlaying")
         }
         else
         {
-            
-            pc.pg.audioPlayer!.seek(to: playTime)
-            print(TAG, "PlayTime_1: \(playTime)")
-            
-            btnPlay.setImage(playImage, for: UIControlState.normal)
-            
+            btnPlay.setImage(pauseImage, for: UIControlState.normal)
+            pc.resumePlay()
+            //pc.play()
             print(TAG, "btnPlayClicked: isNotPlaying")
         }
-        //pc.playRemoteFile(musicFile: showName)
     }
 
     @IBAction func btnBackClicked(_ sender: Any) {
