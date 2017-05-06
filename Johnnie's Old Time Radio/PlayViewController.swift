@@ -22,6 +22,7 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var imgPlay: UIImageView!
     @IBOutlet weak var btnSlider: UISlider!
     @IBOutlet weak var btnVolume: UIButton!
+    @IBOutlet weak var lblTitle: UILabel!
     
     @IBOutlet weak var lblElapsed: UILabel!
     @IBOutlet weak var lblDuration: UILabel!
@@ -38,7 +39,10 @@ class PlayViewController: UIViewController {
         // Do any additional setup after loading the view.
         print(TAG, "\(showId)")
         print(TAG, "\(showTitle)")
+        print(TAG, "Volume value \(btnSlider.value)")
+        lblTitle.text = showTitle
         pc.playRemoteFile(musicFile: showName)
+        pc.setVolume(value: btnSlider.value)
     }
     
     @IBAction func btnPlayClicked(_ sender: UIButton) {
@@ -72,14 +76,17 @@ class PlayViewController: UIViewController {
         
     }
     
-    @IBAction func btnSliderClicked(_ sender: Any) {
+    @IBAction func btnSliderClicked(_ sender: UISlider) {
         // TODO: increase or decrease the volume based on slider position.
+        let selectedValue = Float(sender.value)
+        pc.setVolume(value: selectedValue)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
 
     /*

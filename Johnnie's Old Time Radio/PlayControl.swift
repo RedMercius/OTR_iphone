@@ -33,7 +33,7 @@ class PlayControl {
         if ( false == isPlaying() )
         {
            
-           pg.audioPlayer.volume = 1.0
+           // pg.audioPlayer.volume = 1.0
            pg.audioPlayer.rate = 1.0
            pg.audioPlayer.play()
            print(TAG + "First Time Playing")
@@ -74,7 +74,6 @@ class PlayControl {
     
     public func resumePlay()
     {
-        //pg.audioPlayer.seek(to: time)
         pg.audioPlayer.play()
     }
     
@@ -93,5 +92,10 @@ class PlayControl {
         {
             return false
         }
+    }
+    
+    public func setVolume(value: Float)
+    {
+        pg.audioPlayer.volume = value
     }
 }

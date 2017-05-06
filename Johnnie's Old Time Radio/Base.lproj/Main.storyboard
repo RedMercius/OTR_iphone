@@ -399,6 +399,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Burns&amp;Allen" translatesAutoresizingMaskIntoConstraints="NO" id="2AE-n0-VWd" userLabel="imgPlay">
+                                <rect key="frame" x="72" y="234" width="240" height="263"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8Z-1n-f8S" userLabel="btnRev">
                                 <rect key="frame" x="60" y="145" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -456,10 +460,13 @@
                                 <rect key="frame" x="110" y="204" width="165" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Burns&amp;Allen" translatesAutoresizingMaskIntoConstraints="NO" id="2AE-n0-VWd" userLabel="imgPlay">
-                                <rect key="frame" x="72" y="234" width="240" height="263"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YaM-Em-4DG" userLabel="lblTitle">
+                                <rect key="frame" x="50" y="80" width="285" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -472,6 +479,7 @@
                         <outlet property="imgPlay" destination="2AE-n0-VWd" id="MTB-FP-whN"/>
                         <outlet property="lblDuration" destination="D1l-11-JyU" id="teO-eH-hf9"/>
                         <outlet property="lblElapsed" destination="j0j-GK-W6i" id="k7f-O1-QGM"/>
+                        <outlet property="lblTitle" destination="YaM-Em-4DG" id="F70-gA-N4c"/>
                         <outlet property="playProgBar" destination="UQ9-B3-eqk" id="Jui-Kv-25a"/>
                     </connections>
                 </viewController>
