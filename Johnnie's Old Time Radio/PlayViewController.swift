@@ -43,6 +43,7 @@ class PlayViewController: UIViewController {
         lblTitle.text = showTitle
         pc.playRemoteFile(musicFile: showName)
         pc.setVolume(value: btnSlider.value)
+        setDuration()
     }
     
     @IBAction func btnPlayClicked(_ sender: UIButton) {
@@ -87,6 +88,23 @@ class PlayViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    private func setDuration()
+    {
+        let dTotalSeconds = lrint(CMTimeGetSeconds(pc.getDuration()))
+        
+        let dHours = Int(dTotalSeconds / 3600)
+        let dMinutes = Int(dTotalSeconds % 3600) / 60
+        let dSeconds = Int(dTotalSeconds % 60)
+        
+        if (dHours > 0)
+        {
+           lblDuration.text = String(format: "%i:%02i:%02i", abs(dHours), abs(dMinutes), abs(dSeconds))
+        }
+        else
+        {
+           lblDuration.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
+        }
+    }
     
 
     /*

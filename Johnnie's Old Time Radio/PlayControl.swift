@@ -77,6 +77,11 @@ class PlayControl {
         pg.audioPlayer.play()
     }
     
+    public func getDuration() -> CMTime
+    {
+        return pg.audioPlayer.currentItem!.duration
+    }
+    
     public func getCurrentTime() -> CMTime
     {
         return pg.audioPlayer.currentTime()
