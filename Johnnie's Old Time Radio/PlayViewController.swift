@@ -23,8 +23,12 @@ class PlayViewController: UIViewController {
     @IBOutlet weak var btnSlider: UISlider!
     @IBOutlet weak var btnVolume: UIButton!
     
+    @IBOutlet weak var lblElapsed: UILabel!
+    @IBOutlet weak var lblDuration: UILabel!
+    
+    @IBOutlet weak var playProgBar: UIProgressView!
+    
     var pc = PlayControl()
-    // var audioPlayer = PlayControl().audioPlayer
     var playTime: CMTime = CMTime(seconds: 0, preferredTimescale: 0)
     let TAG = "PlayView: "
     
@@ -42,49 +46,36 @@ class PlayViewController: UIViewController {
         let playImage: UIImage = UIImage(named: "play50.png")!
         let pauseImage: UIImage = UIImage(named: "pause50.png")!
         
-        print(TAG, "PlayTime_0: \(playTime)")
-        
         if (true == pc.isPlaying())
         {
             btnPlay.setImage(playImage, for: UIControlState.normal)
             pc.pause()
             playTime = pc.getCurrentTime()
-            print(TAG, "btnPlayClicked: isPlaying")
         }
         else
         {
             btnPlay.setImage(pauseImage, for: UIControlState.normal)
             pc.resumePlay()
-            //pc.play()
-            print(TAG, "btnPlayClicked: isNotPlaying")
         }
     }
 
     @IBAction func btnBackClicked(_ sender: Any) {
-        // TODO: if playing, go back 15 seconds.
+        pc.back15()
     }
     
     @IBAction func btnForwardClicked(_ sender: Any) {
-        // TODO: if playing, go forward 15 seconds.
+        pc.forward15()
     }
     
     @IBAction func btnVolumeClicked(_ sender: Any) {
         // TODO: move from mute, soft, medium to loud based on volume position.
+        
     }
     
     @IBAction func btnSliderClicked(_ sender: Any) {
         // TODO: increase or decrease the volume based on slider position.
     }
     
-    /*func playRemoteFile() {
-        
-        let fileUrl = "http://www.JohnnieRuffin.com/audio" + showName
-        let url = NSURL(string: fileUrl)
-        
-        var myPlayer = AVPlayer(URL: url)
-        myPlayer.play()
-    }*/
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
