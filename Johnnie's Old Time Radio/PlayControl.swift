@@ -103,4 +103,9 @@ class PlayControl {
     {
         pg.audioPlayer.volume = value
     }
+    
+    public func getVolume() -> Float
+    {
+        return pg.audioPlayer.volume
+    }
 }

@@ -77,12 +77,10 @@ class PlayViewController: UIViewController {
     }
     
     @IBAction func btnVolumeClicked(_ sender: Any) {
-        // TODO: move from mute, soft, medium to loud based on volume position.
-        
+        setVolumeButton()
     }
     
     @IBAction func btnSliderClicked(_ sender: UISlider) {
-        // TODO: increase or decrease the volume based on slider position.
         let selectedValue = Float(sender.value)
         pc.setVolume(value: selectedValue)
     }
@@ -90,6 +88,43 @@ class PlayViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    private func setVolumeButton()
+    {
+        let mute = Int(0)
+        let medium = Int(5)
+        let loud = Int(10)
+        let sliderValue = Int(btnSlider.value * 10)
+        
+        let muteImage: UIImage = UIImage(named: "mute32x1.png")!
+        let mediumImage: UIImage = UIImage(named: "Low Volume_32x1.png")!
+        let loudImage: UIImage = UIImage(named: "highvolume_32x1.png")!
+        
+        if (sliderValue < medium)
+        {
+            // if mute or soft, go to medium
+            print(TAG, "mute: slider: \(sliderValue) mute: \(mute)")
+            btnVolume.setImage(mediumImage, for: .normal)
+            btnSlider.setValue(0.5, animated: true)
+            pc.setVolume(value: 0.5)
+        }
+        else if (sliderValue >= medium && sliderValue < loud)
+        {
+            // if medium, go loud
+            print(TAG, "mute: slider: \(sliderValue) mute: \(mute)")
+            btnVolume.setImage(loudImage, for: .normal)
+            btnSlider.setValue(1.0, animated: true)
+            pc.setVolume(value: 1.0)
+        }
+        else if (sliderValue == loud)
+        {
+            // if loud, go to mute
+            print(TAG, "mute: slider: \(sliderValue) mute: \(mute)")
+            btnVolume.setImage(muteImage, for: .normal)
+            btnSlider.setValue(0.0, animated: true)
+            pc.setVolume(value: 0.0)
+        }
     }
     
     private func setDuration()
@@ -139,9 +174,6 @@ class PlayViewController: UIViewController {
         
         RunLoop.current.add(progTimer!, forMode: RunLoopMode.defaultRunLoopMode)
     }
-    
-    
-    
 
     /*
     // MARK: - Navigation
