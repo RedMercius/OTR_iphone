@@ -42,10 +42,10 @@ class PlayViewController: UIViewController {
         // Do any additional setup after loading the view.
         print(TAG, "\(showId)")
         print(TAG, "\(showTitle)")
-        print(TAG, "Volume value \(btnSlider.value)")
         lblTitle.text = showTitle
         pc.playRemoteFile(musicFile: showName)
         pc.setVolume(value: btnSlider.value)
+        playProgBar.setProgress(0.0, animated: false)
         setDuration()
         startProgress();
     }
@@ -92,7 +92,6 @@ class PlayViewController: UIViewController {
     
     private func setVolumeButton()
     {
-        let mute = Int(0)
         let medium = Int(5)
         let loud = Int(10)
         let sliderValue = Int(btnSlider.value * 10)
@@ -104,7 +103,6 @@ class PlayViewController: UIViewController {
         if (sliderValue < medium)
         {
             // if mute or soft, go to medium
-            print(TAG, "mute: slider: \(sliderValue) mute: \(mute)")
             btnVolume.setImage(mediumImage, for: .normal)
             btnSlider.setValue(0.5, animated: true)
             pc.setVolume(value: 0.5)
@@ -112,7 +110,6 @@ class PlayViewController: UIViewController {
         else if (sliderValue >= medium && sliderValue < loud)
         {
             // if medium, go loud
-            print(TAG, "mute: slider: \(sliderValue) mute: \(mute)")
             btnVolume.setImage(loudImage, for: .normal)
             btnSlider.setValue(1.0, animated: true)
             pc.setVolume(value: 1.0)
@@ -120,7 +117,6 @@ class PlayViewController: UIViewController {
         else if (sliderValue == loud)
         {
             // if loud, go to mute
-            print(TAG, "mute: slider: \(sliderValue) mute: \(mute)")
             btnVolume.setImage(muteImage, for: .normal)
             btnSlider.setValue(0.0, animated: true)
             pc.setVolume(value: 0.0)
@@ -143,6 +139,16 @@ class PlayViewController: UIViewController {
         {
            lblDuration.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
         }
+    }
+    
+    private func updateProgressBar()
+    {
+        let currentTime = pc.getCurrentTime()
+        let duration = pc.getDuration()
+        let playCal = Float(currentTime.seconds / duration.seconds)
+        let playPercentage = (playCal)
+        playProgBar.setProgress(playPercentage, animated: true)
+        print(TAG, "Play Percentage: \(playPercentage)")
     }
     
     private func updateElapsedTime()
@@ -170,6 +176,7 @@ class PlayViewController: UIViewController {
         progTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (t) in
             
             self.updateElapsedTime()
+            self.updateProgressBar()
         })
         
         RunLoop.current.add(progTimer!, forMode: RunLoopMode.defaultRunLoopMode)
