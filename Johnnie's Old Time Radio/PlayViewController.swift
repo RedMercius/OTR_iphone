@@ -14,6 +14,9 @@ class PlayViewController: UIViewController {
     var showId: String = "Unknown showId"
     var showTitle: String = "Unknown showTitle"
     var showName: String = "Unknown Name"
+   
+    // timer - used to increment progress
+    var progTimer: Timer?
     
     @IBOutlet weak var btnPlay: UIButton!
     @IBOutlet weak var btnBack: UIButton!
@@ -44,6 +47,7 @@ class PlayViewController: UIViewController {
         pc.playRemoteFile(musicFile: showName)
         pc.setVolume(value: btnSlider.value)
         setDuration()
+        startProgress();
     }
     
     @IBAction func btnPlayClicked(_ sender: UIButton) {
@@ -105,6 +109,38 @@ class PlayViewController: UIViewController {
            lblDuration.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
         }
     }
+    
+    private func updateElapsedTime()
+    {
+        let dTotalSeconds = lrint(CMTimeGetSeconds(pc.getCurrentTime()))
+        
+        let dHours = Int(dTotalSeconds / 3600)
+        let dMinutes = Int(dTotalSeconds % 3600) / 60
+        let dSeconds = Int(dTotalSeconds % 60)
+        
+        if (dHours > 0)
+        {
+            lblElapsed.text = String(format: "%i:%02i:%02i", abs(dHours), abs(dMinutes), abs(dSeconds))
+        }
+        else
+        {
+            lblElapsed.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
+        }
+    }
+    
+    private func startProgress()
+    {
+        
+       // progTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: updateElapsedTime, userInfo: nil, repeats: true )
+        progTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { (t) in
+            
+            self.updateElapsedTime()
+        })
+        
+        RunLoop.current.add(progTimer!, forMode: RunLoopMode.defaultRunLoopMode)
+    }
+    
+    
     
 
     /*
