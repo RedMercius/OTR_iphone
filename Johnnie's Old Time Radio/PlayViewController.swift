@@ -148,7 +148,6 @@ class PlayViewController: UIViewController {
         let playCal = Float(currentTime.seconds / duration.seconds)
         let playPercentage = (playCal)
         playProgBar.setProgress(playPercentage, animated: true)
-        print(TAG, "Play Percentage: \(playPercentage)")
     }
     
     private func updateElapsedTime()

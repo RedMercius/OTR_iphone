@@ -69,7 +69,7 @@ class SelectionTableViewController: UITableViewController {
         showTitle = titles[sender.tag]!
         showName = titleName[sender.tag]!
         
-        print("Title in Label: \(showTitle)")
+        print("Title in Label: \(showTitle) Sender: \(sender.tag)")
         
         performSegue(withIdentifier: "segPlay", sender: self)
     
@@ -87,6 +87,7 @@ class SelectionTableViewController: UITableViewController {
        // let title = ut.findKeyForValue(value: rt.burnsAllenTitles.values[indexPath.row], dictionary: rt.burnsAllenTitles)
         
         cell!.lblTitle.text = titles[indexPath.row]
+        cell!.btnPlay.tag = indexPath.row
         
         // set the delete/download image
         // TODO: set the delete/download image based on whether it has been downloaded.
@@ -103,7 +104,7 @@ class SelectionTableViewController: UITableViewController {
         cell!.btnDel.addTarget(self, action: #selector(SelectionTableViewController.delClicked), for: .touchUpInside)
         
         
-        // Configure the cell...
+     // Configure the cell...
 
         return cell!
     }
