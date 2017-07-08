@@ -11,20 +11,19 @@ import AVFoundation
 
 class PlayerGlobal
 {
-
     var audioPlayer: AVPlayer!
 }
 
 class PlayControl {
     
     let pg = PlayerGlobal()
+    let ut = Utility()
     
     let TAG: String = "PlayControl: "
     
-    public func playRemoteFile(musicFile: String)
+    public func playRemoteFile(musicFile: String, showId: String)
     {
-        print(TAG + "MusicFile: \(musicFile)")
-        let audioFilePath = "http://www.JohnnieRuffin.com/audio/" + musicFile;
+        let audioFilePath = ut.getFilePath(showId: showId) + musicFile;
         print(TAG + "MusicPath: \(audioFilePath)")
         let audioFileUrl = URL(string: audioFilePath)
         let playerItem: AVPlayerItem = AVPlayerItem(url: audioFileUrl!)
@@ -32,8 +31,6 @@ class PlayControl {
         
         if ( false == isPlaying() )
         {
-           
-           // pg.audioPlayer.volume = 1.0
            pg.audioPlayer.rate = 1.0
            pg.audioPlayer.play()
            print(TAG + "First Time Playing")
@@ -108,4 +105,6 @@ class PlayControl {
     {
         return pg.audioPlayer.volume
     }
+    
+    // TODO: check internet connection and local file
 }

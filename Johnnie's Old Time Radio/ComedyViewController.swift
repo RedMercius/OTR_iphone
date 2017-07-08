@@ -33,8 +33,6 @@ class ComedyViewController: UIViewController {
     @IBAction func burnsAllenButton_Click(_ sender: UIButton) {
         print("BurnsAllenButtonClick!!!!")
         showId = "BurnsAndAllen"
-        
-        
     }
     
     @IBAction func gildersleevesButton_Click(_ sender: UIButton) {
@@ -54,15 +52,13 @@ class ComedyViewController: UIViewController {
     
     @IBAction func martinLewisButton_Click(_ sender: UIButton) {
         print("Martin Lewis ButtonClick!!!!")
-        showId = "Martin and Lewis"
+        showId = "MartinAndLewis"
     }
     
     @IBAction func jackBennyButton_Click(_ sender: UIButton) {
         print("Jack Benny ButtonClick!!!!")
-        showId = "Jack Benny"
+        showId = "JackBenny"
     }
-    
-    
     
     // MARK: - Navigation
 

@@ -23,6 +23,7 @@
 		9F9C0ADF1E5732AA00105E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0ADD1E5732AA00105E23 /* Main.storyboard */; };
 		9F9C0AE41E5732AA00105E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F9C0AE21E5732AA00105E23 /* LaunchScreen.storyboard */; };
 		9F9C0AEE1E57C38400105E23 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F9C0AED1E57C38400105E23 /* AudioToolbox.framework */; };
+		9FA9C8981F0E711A005D5D68 /* DownloadControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA9C8971F0E711A005D5D68 /* DownloadControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		9F9C0AE51E5732AA00105E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9F9C0AEB1E57C38300105E23 /* Johnnie's Old Time Radio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Johnnie's Old Time Radio.entitlements"; sourceTree = "<group>"; };
 		9F9C0AED1E57C38400105E23 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9FA9C8971F0E711A005D5D68 /* DownloadControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				9F9C0AEB1E57C38300105E23 /* Johnnie's Old Time Radio.entitlements */,
+				9FA9C8971F0E711A005D5D68 /* DownloadControl.swift */,
 				9F9C0AD91E5732AA00105E23 /* AppDelegate.swift */,
 				9F9C0ADB1E5732AA00105E23 /* ViewController.swift */,
 				9F9C0ADD1E5732AA00105E23 /* Main.storyboard */,
@@ -192,6 +195,7 @@
 				9F106C5C1E5D20D500B37436 /* Utility.swift in Sources */,
 				9F9C0ADA1E5732AA00105E23 /* AppDelegate.swift in Sources */,
 				9F3056D01E59EDE300EE598B /* WesternViewController.swift in Sources */,
+				9FA9C8981F0E711A005D5D68 /* DownloadControl.swift in Sources */,
 				9F3056D41E59F4DC00EE598B /* RadioTitle.swift in Sources */,
 				9F3056CE1E59EDBC00EE598B /* SciFiViewController.swift in Sources */,
 				9F3056D21E59F02D00EE598B /* PlayViewController.swift in Sources */,

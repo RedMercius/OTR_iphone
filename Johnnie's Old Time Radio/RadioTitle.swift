@@ -22,7 +22,9 @@ class RadioTitle {
                    "DimensionX",
                    "XMinusOne",
                    "Hopalong Cassidy",
-                   "FortLaramie"
+                   "FortLaramie",
+                   "JackBenny",
+                   "InnerSanctum"
     ]
     
     let burnsAllenTitles = [
@@ -63,6 +65,10 @@ class RadioTitle {
         "batakinginaveteran.mp3":"Taking in a veteran",
         "bavanderlipsonholiday.mp3":"Vanderlipson Holiday",
         "bawithsamspadedetective.mp3":"With Sam Spade Detective"
+    ]
+    
+    let bobHopeTitles = [
+        "Bob_Hope_Unknown.mp3" : "Bob_Hope_Unknown"
     ]
     
     let fibberTitles = [
@@ -863,6 +869,14 @@ class RadioTitle {
         "Lux1938-09-26SevenKeysToBaldplatebennyLivingstone.mp3":"Seven Keys To Bald plate benny Livingstone"
     ]
     
+    let hopalongCassidyTitles = [
+    "hopalongCassidyUnknown.mp3": "hopalongCassidyUnknown"
+    ]
+    
+    let fortLaramieTitles = [
+    "fortLaramieUnknown.mp3": "fortLarmieUnknown"
+    ]
+    
     let xminusOneTitles = [
         "xminusone_560612_IfYouWasAMoklin.mp3": "If You Was A Moklin",
         "xminusone_560619_ProjectTrojan.mp3": "Project Trojan",
@@ -1000,6 +1014,10 @@ class RadioTitle {
     "Dimx_e048_Kaleidoscope.mp3": "Kaleidoscope",
     "Dimx_e049_Requiem.mp3": "Requiem",
     "Dimx_e050_Nightfall.mp3":"Nightfall"
+    ]
+    
+    let theWhistler = [
+    "TheWhistlerUnknown.mp3" : "TheWhistlerUnknown"
     ]
     
     let nightBeatTitles = [

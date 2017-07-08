@@ -19,24 +19,18 @@ class SelectionTableViewController: UITableViewController {
     var segue: UIStoryboardSegue?
     var rt = RadioTitle()
     var ut = Utility()
+    // var dc = DownloadControl()
+    let TAG = "SelectionTableViewController: "
+    
+    // struct shows { BurnsAndAllen: Int = 0, BobHope, FibberMcGee, Gildersleeves, MartinAndLewis, NightBeat, Speed, Whistler, DimensionX, XMinusOne, HopalongCassidy, FortLaramie,JackBenny, InnerSanctum }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        print("ShowId: \(showId)")
-        
-        for (showTitle, showName) in rt.burnsAllenTitles {
-            titleName.append(showTitle)
-            titles.append(showName)
-            //print("\(showTitle): \(showName)")
-        }
-        
+        navigationItem.title = showId
+        populateShow()
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,13 +49,177 @@ class SelectionTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         var titleCount: Int = 0
         
-        if (showId == rt.showId[0])
+        if ( showId == rt.showId[0] )
         {
             titleCount = rt.burnsAllenTitles.count
             print("BurnsAllenTitle Count: \(rt.burnsAllenTitles.count)")
         }
+        if (showId == rt.showId[1])
+        {
+            titleCount = rt.bobHopeTitles.count
+            print("BobHopeTitle Count: \(rt.bobHopeTitles.count)")
+        }
+
+        if (showId == rt.showId[2])
+        {
+            titleCount = rt.fibberTitles.count
+            print("Fibber McGee Title Count: \(rt.fibberTitles.count)")
+        }
+
+        if (showId == rt.showId[3])
+        {
+            titleCount = rt.gildersleevesTitles.count
+            print("GildersleevesTitle Count: \(rt.gildersleevesTitles.count)")
+        }
+
+        if (showId == rt.showId[4])
+        {
+            titleCount = rt.martinAndLewisTitles.count
+            print("MartinAndLewisTitle Count: \(rt.martinAndLewisTitles.count)")
+        }
+
+        if (showId == rt.showId[5])
+        {
+            titleCount = rt.nightBeatTitles.count
+            print("NightBeatTitle Count: \(rt.nightBeatTitles.count)")
+        }
+
+        if (showId == rt.showId[6])
+        {
+            titleCount = rt.speedGibsonTitles.count
+            print("SpeedGibsonTitle Count: \(rt.speedGibsonTitles.count)")
+        }
+
+        if (showId == rt.showId[7])
+        {
+            titleCount = rt.theWhistler.count
+            print("TheWhistlerTitle Count: \(rt.theWhistler.count)")
+        }
+
+        if (showId == rt.showId[8])
+        {
+            titleCount = rt.dimensionXTitles.count
+            print("DimensionXTitle Count: \(rt.dimensionXTitles.count)")
+        }
         
+        if (showId == rt.showId[9])
+        {
+            titleCount = rt.xminusOneTitles.count
+            print("XminusOneTitle Count: \(rt.xminusOneTitles.count)")
+        }
+        if (showId == rt.showId[10])
+        {
+            titleCount = rt.hopalongCassidyTitles.count
+            print("hopalongCassidyTitle Count: \(rt.hopalongCassidyTitles.count)")
+        }
+        if (showId == rt.showId[11])
+        {
+            titleCount = rt.fortLaramieTitles.count
+            print("fortLaramieTitle Count: \(rt.fortLaramieTitles.count)")
+        }
+        if (showId == rt.showId[12])
+        {
+            titleCount = rt.jackBennyTitles.count
+            print("JackBennyTitle Count: \(rt.jackBennyTitles.count)")
+        }
+        if (showId == rt.showId[13])
+        {
+            titleCount = rt.innerSanctumTitles.count
+            print("InnerSanctumTitle Count: \(rt.innerSanctumTitles.count)")
+        }
         return titleCount
+    }
+    
+    func populateShow()
+    {
+        switch (showId)
+        {
+        case "BurnsAndAllen":
+            for (showTitle, showName) in rt.burnsAllenTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "Bob Hope":
+            for (showTitle, showName) in rt.bobHopeTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "Fibber McGee":
+            for (showTitle, showName) in rt.fibberTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "Gildersleeves":
+            for (showTitle, showName) in rt.gildersleevesTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "MartinAndLewis":
+            for (showTitle, showName) in rt.martinAndLewisTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "NightBeat":
+            for (showTitle, showName) in rt.nightBeatTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "Speed":
+            for (showTitle, showName) in rt.speedGibsonTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "Whistler":
+            for (showTitle, showName) in rt.burnsAllenTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "DimensionX":
+            for (showTitle, showName) in rt.dimensionXTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "XMinusOne":
+            for (showTitle, showName) in rt.xminusOneTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "Hopalong Cassidy":
+            for (showTitle, showName) in rt.hopalongCassidyTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "FortLaramie":
+            for (showTitle, showName) in rt.fortLaramieTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+        case "JackBenny":
+            for (showTitle, showName) in rt.jackBennyTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        case "InnerSanctum":
+            for (showTitle, showName) in rt.innerSanctumTitles {
+                titleName.append(showTitle)
+                titles.append(showName)
+            }
+            break
+        default:
+            break
+        }
     }
     
     func playClicked(sender: UIButton)
@@ -69,14 +227,21 @@ class SelectionTableViewController: UITableViewController {
         showTitle = titles[sender.tag]!
         showName = titleName[sender.tag]!
         
-        print("Title in Label: \(showTitle) Sender: \(sender.tag)")
+        // print("Title in Label: \(showTitle) Sender: \(sender.tag)")
         
         performSegue(withIdentifier: "segPlay", sender: self)
-    
     }
     
     func delClicked(sender: UIButton)
     {
+        print(TAG + "File started for download \(titleName[sender.tag]!)")
+        
+        DownloadControl.shared.downloadFile(path: titleName[sender.tag]!, showId: showId)
+        
+        
+        
+        // DownloadControl.load(URL)
+            
        // print("delClicked: \(titles[sender.tag])")
     }
     
@@ -91,7 +256,14 @@ class SelectionTableViewController: UITableViewController {
         
         // set the delete/download image
         // TODO: set the delete/download image based on whether it has been downloaded.
-        cell!.btnDel.setImage(UIImage(named: "ic_download.png"), for: UIControlState.normal)
+        if (isFileDownloaded(showTitle: titleName[indexPath.row]!))
+        {
+            cell!.btnDel.setImage(UIImage(named: "ic_delete.png"), for: UIControlState.normal)
+        }
+        else
+        {
+            cell!.btnDel.setImage(UIImage(named: "ic_download.png"), for: UIControlState.normal)
+        }
         
         // set the cloud image
         // TODO: Set the cloud button to appear only if the mp3 has been downloaded.
@@ -107,6 +279,23 @@ class SelectionTableViewController: UITableViewController {
      // Configure the cell...
 
         return cell!
+    }
+    
+    private func isFileDownloaded(showTitle: String) -> Bool
+    {
+        // TODO: check is the file has been downloaded.
+        let path = NSSearchPathForDirectoriesInDomains(.musicDirectory, .userDomainMask, true)[0] as String
+        let url = NSURL(fileURLWithPath: path)
+        let filePath = url.appendingPathComponent(showTitle)?.path
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: filePath!) {
+            print(TAG + "FILE AVAILABLE: \(showTitle)")
+            return true
+        } else {
+            print(TAG + "FILE NOT AVAILABLE: \(showTitle)")
+            return false
+        }
+        return false
     }
     
     /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -179,6 +368,4 @@ class SelectionTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
-
 }

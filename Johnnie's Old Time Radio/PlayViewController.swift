@@ -38,17 +38,19 @@ class PlayViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // navigationItem.title = "Back"
         // Do any additional setup after loading the view.
         print(TAG, "\(showId)")
         print(TAG, "\(showTitle)")
+        updatePlayImage()
         lblTitle.text = showTitle
-        pc.playRemoteFile(musicFile: showName)
+        navigationItem.title = showTitle
+        pc.playRemoteFile(musicFile: showName, showId: showId)
         pc.setVolume(value: btnSlider.value)
         playProgBar.setProgress(0.0, animated: false)
-        setDuration()
         startProgress();
-    }
+        }
     
     @IBAction func btnPlayClicked(_ sender: UIButton) {
         
@@ -83,6 +85,29 @@ class PlayViewController: UIViewController {
     @IBAction func btnSliderClicked(_ sender: UISlider) {
         let selectedValue = Float(sender.value)
         pc.setVolume(value: selectedValue)
+        let sliderValue = Int(btnSlider.value * 10)
+        
+        let medium = Int(5)
+        
+        let muteImage: UIImage = UIImage(named: "mute32x1.png")!
+        let mediumImage: UIImage = UIImage(named: "Low Volume_32x1.png")!
+        let loudImage: UIImage = UIImage(named: "highvolume_32x1.png")!
+        
+        if (sliderValue < medium && sliderValue != 0)
+        {
+            // if soft, go to medium
+            btnVolume.setImage(mediumImage, for: .normal)
+        }
+        else if (sliderValue > medium)
+        {
+            // if more than or equal to medium, go loud
+            btnVolume.setImage(loudImage, for: .normal)
+        }
+        else if (sliderValue == 0)
+        {
+            // if soft, go to mute
+            btnVolume.setImage(muteImage, for: .normal)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -123,6 +148,15 @@ class PlayViewController: UIViewController {
         }
     }
     
+    private func updateProgressBar()
+    {
+        let currentTime = pc.getCurrentTime()
+        let duration = pc.getDuration()
+        let playCal = Float(currentTime.seconds / duration.seconds)
+        let playPercentage = (playCal)
+        playProgBar.setProgress(playPercentage, animated: true)
+    }
+    
     private func setDuration()
     {
         let dTotalSeconds = lrint(CMTimeGetSeconds(pc.getDuration()))
@@ -133,21 +167,12 @@ class PlayViewController: UIViewController {
         
         if (dHours > 0)
         {
-           lblDuration.text = String(format: "%i:%02i:%02i", abs(dHours), abs(dMinutes), abs(dSeconds))
+            lblDuration.text = String(format: "%i:%02i:%02i", abs(dHours), abs(dMinutes), abs(dSeconds))
         }
         else
         {
-           lblDuration.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
+            lblDuration.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
         }
-    }
-    
-    private func updateProgressBar()
-    {
-        let currentTime = pc.getCurrentTime()
-        let duration = pc.getDuration()
-        let playCal = Float(currentTime.seconds / duration.seconds)
-        let playPercentage = (playCal)
-        playProgBar.setProgress(playPercentage, animated: true)
     }
     
     private func updateElapsedTime()
@@ -166,6 +191,7 @@ class PlayViewController: UIViewController {
         {
             lblElapsed.text = String(format: "%02i:%02i", abs(dMinutes), abs(dSeconds))
         }
+        setDuration()
     }
     
     private func startProgress()
@@ -180,15 +206,80 @@ class PlayViewController: UIViewController {
         
         RunLoop.current.add(progTimer!, forMode: RunLoopMode.defaultRunLoopMode)
     }
+    
+    private func updatePlayImage()
+    {
+        let burnsImage: UIImage = UIImage(named: "Burns&Allen.png")!
+        let bobHopeImage: UIImage = UIImage(named: "Bob Hope.png")!
+        let fibberMcGeeImage: UIImage = UIImage(named: "Fibber McGee.png")!
+        let gildersleeves: UIImage = UIImage(named: "Gildersleeves.png")!
+        let martinAndLewis: UIImage = UIImage(named: "Martin&Lewis.png")!
+        let nightBeat: UIImage = UIImage(named: "NightBeat.png")!
+        let speed: UIImage = UIImage(named: "Speed.png")!
+        let whistler: UIImage = UIImage(named: "Whistler.png")!
+        let dimensionX: UIImage = UIImage(named: "DimensionX.png")!
+        let xminusOne: UIImage = UIImage(named: "XMinusOne.png")!
+        let hopalongCassidy: UIImage = UIImage(named: "Hopalong.png")!
+        let fortLaramie: UIImage = UIImage(named: "FortLaramie.png")!
+        let jackBenny: UIImage = UIImage(named: "Jack Benny")!
+        let innerSanctum: UIImage = UIImage(named: "Inner Sanctum.png")!
 
-    /*
+        switch (showId)
+        {
+        case "BurnsAndAllen":
+            imgPlay.image = burnsImage
+            break
+        case "Bob Hope":
+            imgPlay.image = bobHopeImage
+            break
+        case "Fibber McGee":
+            imgPlay.image = fibberMcGeeImage
+            break
+        case "Gildersleeves":
+            imgPlay.image = gildersleeves
+            break
+        case "MartinAndLewis":
+            imgPlay.image = martinAndLewis
+            break
+        case "NightBeat":
+            imgPlay.image = nightBeat
+            break
+        case "Speed":
+            imgPlay.image = speed
+            break
+        case "Whistler":
+            imgPlay.image = whistler
+            break
+        case "DimensionX":
+            imgPlay.image = dimensionX
+            break
+        case "XMinusOne":
+            imgPlay.image = xminusOne
+            break
+        case "Hopalong Cassidy":
+            imgPlay.image = hopalongCassidy
+            break
+        case "FortLaramie":
+            imgPlay.image = fortLaramie
+            break
+        case "JackBenny":
+            imgPlay.image = jackBenny
+            break
+        case "InnerSanctum":
+            imgPlay.image = innerSanctum
+            break
+        default:
+            break
+        }
+    }
+
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        navigationItem.title = "One"
     }
-    */
-
 }
