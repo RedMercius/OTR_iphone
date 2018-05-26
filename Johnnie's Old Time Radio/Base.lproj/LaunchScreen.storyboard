@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Johnnie's Old Time Radio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DO0-Gc-4Ml">
-                                <rect key="frame" x="51" y="265" width="258" height="79"/>
+                                <rect key="frame" x="58" y="294" width="258" height="79"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,10 +31,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DO0-Gc-4Ml" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="245" id="AY3-yG-3Kw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="DO0-Gc-4Ml" secondAttribute="trailing" constant="50" id="FRn-4h-wcq"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="DO0-Gc-4Ml" secondAttribute="bottom" constant="323" id="FcM-AO-A9W"/>
-                            <constraint firstItem="DO0-Gc-4Ml" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="35" id="XSI-ef-W08"/>
+                            <constraint firstItem="DO0-Gc-4Ml" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="42" id="4O9-Dw-BAW"/>
+                            <constraint firstItem="DO0-Gc-4Ml" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="4tt-8a-aJZ"/>
+                            <constraint firstItem="DO0-Gc-4Ml" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DSq-LM-JSj"/>
+                            <constraint firstItem="DO0-Gc-4Ml" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="274" id="Es7-dR-PB9"/>
                         </constraints>
                     </view>
                 </viewController>

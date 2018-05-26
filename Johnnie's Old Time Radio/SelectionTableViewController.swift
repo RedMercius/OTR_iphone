@@ -222,7 +222,7 @@ class SelectionTableViewController: UITableViewController {
         }
     }
     
-    func playClicked(sender: UIButton)
+    @objc func playClicked(sender: UIButton)
     {
         showTitle = titles[sender.tag]!
         showName = titleName[sender.tag]!
@@ -232,17 +232,15 @@ class SelectionTableViewController: UITableViewController {
         performSegue(withIdentifier: "segPlay", sender: self)
     }
     
-    func delClicked(sender: UIButton)
+    @objc func delClicked(sender: UIButton)
     {
+        // TODO: Check for file to delete. If does not exist, download.
+        // TODO: If downloading, remove line item.
         print(TAG + "File started for download \(titleName[sender.tag]!)")
         
-        DownloadControl.shared.downloadFile(path: titleName[sender.tag]!, showId: showId)
-        
-        
-        
-        // DownloadControl.load(URL)
-            
-       // print("delClicked: \(titles[sender.tag])")
+        let config = URLSessionConfiguration.background(withIdentifier: titleName[sender.tag]!)
+        let session = URLSession(configuration: config, delegate: self as! URLSessionDelegate, delegateQueue: OperationQueue())
+        downloadFile(path: titleName[sender.tag]!, showId: showId, session: session)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -275,7 +273,6 @@ class SelectionTableViewController: UITableViewController {
         // setup download/del button actions
         cell!.btnDel.addTarget(self, action: #selector(SelectionTableViewController.delClicked), for: .touchUpInside)
         
-        
      // Configure the cell...
 
         return cell!
@@ -283,7 +280,7 @@ class SelectionTableViewController: UITableViewController {
     
     private func isFileDownloaded(showTitle: String) -> Bool
     {
-        // TODO: check is the file has been downloaded.
+        // TODO: check if the file has been downloaded.
         let path = NSSearchPathForDirectoriesInDomains(.musicDirectory, .userDomainMask, true)[0] as String
         let url = NSURL(fileURLWithPath: path)
         let filePath = url.appendingPathComponent(showTitle)?.path
@@ -295,7 +292,6 @@ class SelectionTableViewController: UITableViewController {
             print(TAG + "FILE NOT AVAILABLE: \(showTitle)")
             return false
         }
-        return false
     }
     
     /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
