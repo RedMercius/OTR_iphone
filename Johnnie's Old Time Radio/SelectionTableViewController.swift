@@ -19,7 +19,7 @@ class SelectionTableViewController: UITableViewController {
     var segue: UIStoryboardSegue?
     var rt = RadioTitle()
     var ut = Utility()
-    // var dc = DownloadControl()
+    var dc = DownloadControl()
     let TAG = "SelectionTableViewController: "
     
     // struct shows { BurnsAndAllen: Int = 0, BobHope, FibberMcGee, Gildersleeves, MartinAndLewis, NightBeat, Speed, Whistler, DimensionX, XMinusOne, HopalongCassidy, FortLaramie,JackBenny, InnerSanctum }
@@ -236,36 +236,53 @@ class SelectionTableViewController: UITableViewController {
     {
         // TODO: Check for file to delete. If does not exist, download.
         // TODO: If downloading, remove line item.
-        print(TAG + "File started for download \(titleName[sender.tag]!)")
         
-        let config = URLSessionConfiguration.background(withIdentifier: titleName[sender.tag]!)
-        let session = URLSession(configuration: config, delegate: self as! URLSessionDelegate, delegateQueue: OperationQueue())
-        downloadFile(path: titleName[sender.tag]!, showId: showId, session: session)
+        if (isFileDownloaded(showTitle: titleName[sender.tag]!))
+        {
+            // TODO: delete the current file
+        }
+        else
+        {
+            // set the file for download
+            print(TAG + "File started for download \(titleName[sender.tag]!)")
+        
+            let config = URLSessionConfiguration.background(withIdentifier: titleName[sender.tag]!)
+            let session = URLSession(configuration: config, delegate: self as? URLSessionDelegate, delegateQueue: OperationQueue())
+            dc.downloadFile(path: titleName[sender.tag]!, showId: showId, session: session)
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SelectionTableViewCell
         
-       // let title = ut.findKeyForValue(value: rt.burnsAllenTitles.values[indexPath.row], dictionary: rt.burnsAllenTitles)
-        
+        // set the title for the cell
         cell!.lblTitle.text = titles[indexPath.row]
         cell!.btnPlay.tag = indexPath.row
         
         // set the delete/download image
-        // TODO: set the delete/download image based on whether it has been downloaded.
         if (isFileDownloaded(showTitle: titleName[indexPath.row]!))
         {
+            // set the delete image
             cell!.btnDel.setImage(UIImage(named: "ic_delete.png"), for: UIControlState.normal)
+            
+            // set the cloud image
+            cell!.btnCloud.isHidden = false
         }
         else
         {
+            // set the download image
             cell!.btnDel.setImage(UIImage(named: "ic_download.png"), for: UIControlState.normal)
+            
+            // set the cloud image
+            cell!.btnCloud.isHidden = true
         }
         
-        // set the cloud image
-        // TODO: Set the cloud button to appear only if the mp3 has been downloaded.
-        cell!.btnCloud.isHidden = false
+        // TODO: check if it is currently being downloaded
+        // TODO: if currently being download, remove play button and download/delete button
+        // TODO: Add a download progress bar and "Downloading" text
+        // TODO: Always update progress bar based on background session
+        // TODO: Handle any download errors gracefully.
         
         // setup play button actions
         cell!.btnPlay.addTarget(self, action: #selector(SelectionTableViewController.playClicked), for: .touchUpInside)
@@ -273,8 +290,7 @@ class SelectionTableViewController: UITableViewController {
         // setup download/del button actions
         cell!.btnDel.addTarget(self, action: #selector(SelectionTableViewController.delClicked), for: .touchUpInside)
         
-     // Configure the cell...
-
+        // Configure the cell...
         return cell!
     }
     
